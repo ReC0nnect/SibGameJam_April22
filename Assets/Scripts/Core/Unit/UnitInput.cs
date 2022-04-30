@@ -8,14 +8,14 @@ public class UnitInput : MonoBehaviour
 {
     [SerializeField] float Speed = 5f;
 
-    Rigidbody RigidbodyCached;
-    Rigidbody Rigidbody {
+    UnitView UnitViewCached;
+    UnitView UnitView {
         get {
-            if (!RigidbodyCached)
+            if (!UnitViewCached)
             {
-                RigidbodyCached = GetComponent<Rigidbody>();
+                UnitViewCached = GetComponent<UnitView>();
             }
-            return RigidbodyCached;
+            return UnitViewCached;
         }
     }
 
@@ -46,7 +46,7 @@ public class UnitInput : MonoBehaviour
 
         if (direction != Vector3.zero)
         {
-            Rigidbody.velocity = direction.normalized * Speed;
+            UnitView.SetVelocity(direction.normalized * Speed);
         }
     }
 }
