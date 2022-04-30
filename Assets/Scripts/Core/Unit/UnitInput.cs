@@ -6,6 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class UnitInput : MonoBehaviour
 {
+    public Animation_Script Anim;
+    private int side;
+
     [SerializeField] float Speed = 5f;
 
     UnitView UnitViewCached;
@@ -18,7 +21,7 @@ public class UnitInput : MonoBehaviour
             return UnitViewCached;
         }
     }
-
+   
     void Update()
     {
         Movement();
@@ -52,5 +55,13 @@ public class UnitInput : MonoBehaviour
         {
             UnitView.SetVelocity(direction.normalized * Speed);
         }
+
+        if (direction.x < 0)
+        {
+            side = -1;
+            Anim.Flip(side);
+        }
+
+        Anim.SetHorizontalMovement(direction.x, direction.y);
     }
 }
