@@ -29,19 +29,23 @@ public class UnitInput : MonoBehaviour
         var direction = Vector3.zero;
         if (Input.GetKey(KeyCode.D))
         {
-            direction.x = 1f;
+            direction.x += 1f;
+            direction.z += 1f;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            direction.x = -1f;
+            direction.x += -1f;
+            direction.z += -1f;
         }
         if (Input.GetKey(KeyCode.W))
         {
-            direction.z = 1f;
+            direction.x += -1f;
+            direction.z += 1f;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            direction.z = -1f;
+            direction.x += 1f;
+            direction.z += -1f;
         }
 
         if (direction != Vector3.zero)
