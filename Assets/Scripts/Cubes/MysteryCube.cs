@@ -6,6 +6,9 @@ using UnityEngine;
 public class MysteryCube : MonoBehaviour
 {
     [SerializeField] Collider Collider;
+    [SerializeField] Material DefaultMaterial;
+    [SerializeField] Material FreeMaterial;
+    [SerializeField] MeshRenderer Mesh;
 
     MysteryCubeEntity Entity;
 
@@ -14,11 +17,6 @@ public class MysteryCube : MonoBehaviour
     public void Init(MysteryCubeEntity entity)
     {
         Entity = entity;
-    }
-
-    void Update()
-    {
-        
     }
 
     public void SetPosition(Vector3 position)
@@ -41,8 +39,8 @@ public class MysteryCube : MonoBehaviour
         var rotationAngle = new Vector3
         {
             x = randValue % 2f == 0f ? F.Settings.CubeAttackRotation : 0f,
-            y = randValue % 3f == 0f ? F.Settings.CubeAttackRotation : 0f,
-            z = randValue % 5f == 0f ? F.Settings.CubeAttackRotation : 0f
+            y = F.Settings.CubeAttackRotation,
+            z = randValue % 3f == 0f ? F.Settings.CubeAttackRotation : 0f
         };
 
         Collider.isTrigger = true;
@@ -55,6 +53,11 @@ public class MysteryCube : MonoBehaviour
         Collider.isTrigger = false;
         transform.localPosition = finishPosition;
         transform.rotation = Quaternion.identity;
+    }
+
+    public void ChangeMaterial(bool state)
+    {
+        Mesh.material = state ? DefaultMaterial : FreeMaterial;
     }
 
     public void Shoot(UnitEntity target)
@@ -74,7 +77,7 @@ public class MysteryCube : MonoBehaviour
         {
             x = randValue % 2f == 0f ? F.Settings.CubeAttackRotation : 0f,
             y = randValue % 3f == 0f ? F.Settings.CubeAttackRotation : 0f,
-            z = randValue % 5f == 0f ? F.Settings.CubeAttackRotation : 0f
+            z = F.Settings.CubeAttackRotation
         };
 
         Collider.isTrigger = true;

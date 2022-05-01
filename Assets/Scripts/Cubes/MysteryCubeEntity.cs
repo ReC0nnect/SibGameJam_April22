@@ -37,4 +37,9 @@ public class MysteryCubeEntity
     {
         View.Shoot(target);
     }
+
+    public void SetCaptured(bool state)
+    {
+        View.ChangeMaterial(state);
+    }
 }

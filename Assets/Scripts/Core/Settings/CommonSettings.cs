@@ -18,6 +18,11 @@ public class CommonSettings : ScriptableObject
     public float CubeMovingSpeed = 5f;
     public float CubeAttackTime = 5f;
 
+    [Header("Free Cube")]
+    public Vector2 FreeCubeRange = new Vector2();
+    public int FreeCubeCount = 128;
+    public float FreeCubeMaxDistance = 32f;
+
     [Header("Enemies")]
     public float EnemySpawnRadius = 15f;
     public float EnemySpawnDelay = 15f;

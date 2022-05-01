@@ -8,4 +8,5 @@ public class PrefabSettings : ScriptableObject
 {
     public UnitView Enemy;
     public MysteryCube Cube;
+    public MysteryCube FreeCube;
 }

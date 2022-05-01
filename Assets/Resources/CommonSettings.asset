@@ -20,6 +20,9 @@ MonoBehaviour:
   CubeRadius: 3
   CubeMovingSpeed: 4
   CubeAttackTime: 1
+  FreeCubeRange: {x: 32, y: 48}
+  FreeCubeCount: 16
+  FreeCubeMaxDistance: 48
   EnemySpawnRadius: 15
-  EnemySpawnDelay: 3
+  EnemySpawnDelay: 15
   EnemyMovingSpeed: 3

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 1013696757366125674, guid: 23f4245aac8a4c746967642a23b61ffa, type: 3}
   Cube: {fileID: -1163273833580696268, guid: f383e0c896643a64aae6fea3d7368732, type: 3}
+  FreeCube: {fileID: -1163273833580696268, guid: 87fdd690ecc424e459a5116277732c74, type: 3}
