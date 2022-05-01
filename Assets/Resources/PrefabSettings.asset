@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: PrefabSettings
   m_EditorClassIdentifier: 
   Enemy: {fileID: 3961132551914187690, guid: 23f4245aac8a4c746967642a23b61ffa, type: 3}
+  Cube: {fileID: -1163273833580696268, guid: f383e0c896643a64aae6fea3d7368732, type: 3}

@@ -8,4 +8,9 @@ public class SessionStart : MonoBehaviour
     {
         SessionEntity.Create();
     }
+
+    void Update()
+    {
+        SessionEntity.Update();
+    }
 }

@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: CommonSettings
   m_EditorClassIdentifier: 
   EnemySpawnRadius: 15
+  CubesCount: 6
+  CubeRadius: 5

@@ -8,6 +8,9 @@ public class UnitView : MonoBehaviour
     SessionEntity Session;
 
     Rigidbody RigidbodyCached;
+
+    public Vector3 Position => transform.position;
+
     Rigidbody Rigidbody {
         get {
             if (!RigidbodyCached)

@@ -7,4 +7,5 @@ using UnityEngine;
 public class PrefabSettings : ScriptableObject
 {
     public GameObject Enemy;
+    public MysteryCube Cube;
 }

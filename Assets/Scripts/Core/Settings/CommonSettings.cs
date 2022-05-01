@@ -7,4 +7,6 @@ using UnityEngine;
 public class CommonSettings : ScriptableObject
 {
     public float EnemySpawnRadius = 15f;
+    public int CubesCount = 32;
+    public float CubeRadius = 5f;
 }

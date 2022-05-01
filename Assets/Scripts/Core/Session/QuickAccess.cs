@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class F
 {
-    public static PrefabSettings PrefabsCached;
+    static PrefabSettings PrefabsCached;
     public static PrefabSettings Prefabs {
         get {
             if (!PrefabsCached)
@@ -15,7 +15,7 @@ public static class F
         }
     }
 
-    public static CommonSettings SettingsCached;
+    static CommonSettings SettingsCached;
     public static CommonSettings Settings {
         get {
             if (!SettingsCached)
