@@ -800,7 +800,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Var1_0
+      name: Enemy_Skull
       rect:
         serializedVersion: 2
         x: 199
@@ -1052,7 +1052,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Var3_0
+      name: Enemy_ZombieV1
       rect:
         serializedVersion: 2
         x: 199
@@ -1068,111 +1068,6 @@ TextureImporter:
       bones: []
       spriteID: 84b8b6f9cbec57642ab2a48f62094c16
       internalID: 1542112584
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Var3_1
-      rect:
-        serializedVersion: 2
-        x: 232
-        y: 71
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab875f11a393ed3419f6270a9e8a0ee1
-      internalID: -953555060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Var3_2
-      rect:
-        serializedVersion: 2
-        x: 265
-        y: 71
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8fe589728e4331f44b0209756dcdf220
-      internalID: 792997346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Var3_3
-      rect:
-        serializedVersion: 2
-        x: 298
-        y: 71
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af527e180df5bdd439aceacf6c2ef1b6
-      internalID: -957174765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Var3_4
-      rect:
-        serializedVersion: 2
-        x: 331
-        y: 71
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94355d2e3af13f243bbaecf9d28a1706
-      internalID: 505763300
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Var3_5
-      rect:
-        serializedVersion: 2
-        x: 364
-        y: 71
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28ae4a3b910ab264aa3cf7d1e777857b
-      internalID: 72476887
       vertices: []
       indices: 
       edges: []
@@ -1291,7 +1186,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1299,6 +1194,405 @@ TextureImporter:
       bones: []
       spriteID: c34547a4016cab142a74bafe94b2f195
       internalID: 1103480639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_0
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 45
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6424570ee016adc45aec2cdef988ce54
+      internalID: 969012478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_1
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 45
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fcd6204b1acaa54abe183a979f8fa17
+      internalID: -573589342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_2
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 45
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c11dc4e1d7e25489e3ecb6e771215a
+      internalID: 848432678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_3
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 45
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef81c8d38312b7f4bb90efc9d51f084d
+      internalID: 742913028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_4
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 45
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a890540d2de0b5a43a06da39c7c24990
+      internalID: 1107835499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_5
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 45
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3215b10789246b044ba2d7e6aee9e0d9
+      internalID: 1260361041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_6
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 45
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fbee14e66acebd4e948060b67bbfcca
+      internalID: -1850904069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_7
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 45
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b9092e1f296f6f4dafbecd6d4efafb4
+      internalID: 1170047357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_ZombieV2
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 71
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53da3b278f5c0a4c92836b028431c0b
+      internalID: -1362990250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_ZombieV3
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 71
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b7ce091a3f52046a61044d74bd8a7b
+      internalID: 587713520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Skull_Wing_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 12
+        width: 39
+        height: 12
+      alignment: 9
+      pivot: {x: 0.53846157, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94cef00f3f4164946a50c6a6b8e94dda
+      internalID: -1789779197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Skull_Wing_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 12
+        width: 25
+        height: 21
+      alignment: 9
+      pivot: {x: 0.39999998, y: 0.04761905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39da66489464de04e9f8d5bd651fa1ee
+      internalID: 2118893710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Skull_Wing_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 12
+        width: 27
+        height: 20
+      alignment: 9
+      pivot: {x: 0.4814815, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e74ec4fc94382e43904df134a9c4784
+      internalID: -812041142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Skull_Wing_3
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 9
+        width: 27
+        height: 20
+      alignment: 9
+      pivot: {x: 0.44444445, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2941b08b010717b4bbf6f96a7c0512ee
+      internalID: 725166258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Skull_Wing_4
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1
+        width: 28
+        height: 19
+      alignment: 9
+      pivot: {x: 0.46428573, y: 0.8947368}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd3489144c70fd45af0ebf4f23481b8
+      internalID: -1780469828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Skull_Wing_5
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 1
+        width: 33
+        height: 21
+      alignment: 9
+      pivot: {x: 0.4848485, y: 0.7619048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6700511e05c66ad4086b598766430631
+      internalID: 997568056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Skull_Wing_6
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 3
+        width: 35
+        height: 21
+      alignment: 9
+      pivot: {x: 0.45714286, y: 0.71428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a26cfe383c7aa0498da8f3f755b3b70
+      internalID: 607432001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Skull_Wing_7
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 6
+        width: 35
+        height: 22
+      alignment: 9
+      pivot: {x: 0.45714286, y: 0.45454547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6290e15980bfef141bccac04b6b205f8
+      internalID: 1642065784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Skull_Wing_8
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 11
+        width: 26
+        height: 21
+      alignment: 9
+      pivot: {x: 0.4615385, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4a4ac8efac135479b5d8c7e056024d
+      internalID: -817347242
       vertices: []
       indices: 
       edges: []
@@ -1322,13 +1616,17 @@ TextureImporter:
       Player_Go_Up_4: -2022953267
       Player_Go_Up_Side_3: 2002746559
       Player_Go_Up_0: 2045138165
+      Enemy_ZombieV2: -1362990250
       Enemy_Ghost_4: 740479044
       Enemy_Var1_3: 2026419712
-      Enemy_Var3_0: 1542112584
       Player_Go_Up_3: 714098152
+      Enemy_Skull_Wing_2: -812041142
       Enemy_Ghost_2: -761815560
+      Enemy_Skull_Wing_0: -1789779197
       Enemy_Var1_4: -1451788372
       Enemy_Var3_2: 792997346
+      Enemy_Skull_Wing_5: 997568056
+      Fire_5: 1260361041
       Player_Front_Side_2: 786995083
       Enemy_Var1_2: 655495140
       Enemy_Var2_5: 468422079
@@ -1336,30 +1634,44 @@ TextureImporter:
       Player_Idle_2: 820584783
       Enemy_Var2_3: -1231768817
       Player_Front_Side_1: -156910292
+      Fire_0: 969012478
       Enemy_Ghost_0: 1815464805
       Enemy_Ghost_5: -508337297
       Player_Hand: -1094340535
       Player_Down_5: -1826789178
+      Enemy_Skull_Wing_8: -817347242
+      Fire_7: 1170047357
       Player_Side_Walk_0: 1321643027
       Player_Down_4: 1613259382
       Player_Idle_1: 258121438
       Player_Idle_0: -2087377303
       Player_Down_2: -587460451
+      Enemy_ZombieV1: 1542112584
       Enemy_Var2_1: 295523732
+      Enemy_ZombieV3: 587713520
+      Fire_1: -573589342
       Enemy_Var3_3: -957174765
       Player_Down_1: -178014329
-      Enemy_Ghost_3: 153762803
       Player_Go_Up_Side_4: 1103480639
+      Enemy_Ghost_3: 153762803
+      Enemy_Skull_Wing_1: 2118893710
       Player_Front_Side_0: 1160177991
-      Enemy_Var1_0: -289714113
+      Fire_6: -1850904069
+      Fire_2: 848432678
       Enemy_Var3_5: 72476887
+      Enemy_Skull: -289714113
       Enemy_Var1_5: 1844260788
+      Enemy_Skull_Wing_6: 607432001
+      Enemy_Skull_Wing_7: 1642065784
       Player_Side_Walk_2: -286730402
+      Fire_3: 742913028
       Enemy_Var3_1: -953555060
+      Enemy_Skull_Wing_4: -1780469828
       Player_Go_Up_2: -2000776717
       Player_Go_Up_Side_1: -1371233849
       Player_Front_Side_4: 1056246020
       Enemy_Var1_1: -824574396
+      Fire_4: 1107835499
       Enemy_Var3_4: 505763300
       Player_Side_Walk_3: -2139446931
       Player_Side_Walk_1: -676747913
@@ -1367,6 +1679,7 @@ TextureImporter:
       Player_Side_Walk_5: 322161017
       Player_Down_3: 1813245295
       Player_Go_Up_1: 2028350958
+      Enemy_Skull_Wing_3: 725166258
       Player_Front_Side_3: 1354664474
       Player_Down_0: 692210839
       Player_Go_Up_Side_2: -708067855

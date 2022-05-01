@@ -37,7 +37,7 @@ public class EnemyController
         var direction = new Vector3(randX, 0f, randZ).normalized;
         var enemyPos = Session.Player.Position + direction * F.Settings.EnemySpawnRadius;
 
-        int Random_Num = UnityEngine.Random.Range(0, 3);
+        int Random_Num = UnityEngine.Random.Range(0, 5);
 
         var enemyEntity = new UnitEntity(Session, enemyPos, Random_Num);
         Enemies.Add(enemyEntity);
