@@ -133,7 +133,7 @@ public class CubeController
         if ((Session.Player.Position - nearestSocketPos).sqrMagnitude < magnitude)
         {
             Cubes[index].Cube.UpdatePosition(nearestSocketPos);
-            Cubes[index].Position = Cubes[index].Cube.Position;
+            Cubes[index].Position = nearestSocketPos;
 
             UpdateSockets();
         }

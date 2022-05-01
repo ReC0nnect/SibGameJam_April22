@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MysteryCubeEntity
 {
-    SessionEntity Session;
+    public SessionEntity Session { get; }
 
     MysteryCube View;
 

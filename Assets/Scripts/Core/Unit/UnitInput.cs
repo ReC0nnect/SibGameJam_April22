@@ -9,8 +9,6 @@ public class UnitInput : MonoBehaviour
     public Animation_Script Anim;
     private int side;
 
-    [SerializeField] float Speed = 5f;
-
     UnitView UnitViewCached;
     UnitView UnitView {
         get {
@@ -53,7 +51,7 @@ public class UnitInput : MonoBehaviour
 
         if (direction != Vector3.zero)
         {
-            UnitView.SetVelocity(direction.normalized * Speed);
+            UnitView.SetVelocity(direction.normalized * F.Settings.PlayerSpeed);
         }
 
         if (direction.x < 0)
