@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: CommonSettings
   m_EditorClassIdentifier: 
   EnemySpawnRadius: 15
+  PlayerSpeed: 4
   CubesCount: 6
   CubeRadius: 3
+  CubeMovingSpeed: 5
+  CubeMiddlePointRadius: 5
+  CubePlayerOffset: {x: 0, y: -3, z: 0}

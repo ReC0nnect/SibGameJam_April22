@@ -11,4 +11,6 @@ public class CommonSettings : ScriptableObject
     public int CubesCount = 32;
     public float CubeRadius = 5f;
     public float CubeMovingSpeed = 5f;
+    public float CubeMiddlePointRadius = 5f;
+    public Vector3 CubePlayerOffset = new Vector3(0f, -5f, 0f);
 }
