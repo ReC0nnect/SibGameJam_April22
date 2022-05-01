@@ -51,6 +51,11 @@ public class UnitInput : MonoBehaviour
             direction.z += -1f;
         }
 
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Anim.AttackAnim();
+        }
+
         if (direction != Vector3.zero)
         {
             UnitView.SetVelocity(direction.normalized * F.Settings.PlayerSpeed);

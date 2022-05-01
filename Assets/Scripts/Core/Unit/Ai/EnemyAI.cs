@@ -7,7 +7,7 @@ public class EnemyAI : MonoBehaviour
     SessionEntity Session;
 
     UnitEntity Target;
-
+    public SpriteRenderer Unit_Sprite;
 
     UnitView UnitCached;
     UnitView Unit {
@@ -25,10 +25,21 @@ public class EnemyAI : MonoBehaviour
         Session = session;
 
         Target = session.Player;
+
+        Unit_Sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
     {
         Unit.SetVelocity((Target.Position - Unit.Position).normalized * F.Settings.EnemyMovingSpeed);
+        if (Target.Position.x > Unit.transform.position.x)
+        {
+            Unit_Sprite.flipX = true;
+        }
+        else
+        {
+            Unit_Sprite.flipX = false;
+        }
+
     }
 }

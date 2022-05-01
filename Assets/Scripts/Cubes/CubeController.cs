@@ -12,6 +12,7 @@ public class CubeController
     List<MysteryCubeInfo> Cubes;
     List<Vector3> Sockets;
 
+    private Animation_Script anim;
     Vector3[] TransitionMatrix = new Vector3[4]
     {
         new Vector3(0f, 0f, 1f),
@@ -188,6 +189,7 @@ public class CubeController
         if (Input.GetKeyDown(KeyCode.Space) && Session.Enemy.HasEnemy)
         {
             Shoot();
+            
         }
     }
 
@@ -224,5 +226,6 @@ public class CubeController
         
         Cubes.Remove(farrestCube);
         farrestCube.Cube.Shoot(Session.Enemy.GetNearestOfPlayer());
+
     }
 }

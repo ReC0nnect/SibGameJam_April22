@@ -16,6 +16,11 @@ public class Animation_Script : MonoBehaviour
         
         
     }
+
+    public void AttackAnim()
+    {
+        anim.SetTrigger("Attack");
+    }
     public void SetHorizontalMovement(float x, float y)
     {
         anim.SetFloat("HorizontalAxis", x);

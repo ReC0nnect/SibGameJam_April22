@@ -23,11 +23,16 @@ public class UnitEntity
         }
     }
 
-    public UnitEntity(SessionEntity session, Vector3 position)
+    public UnitEntity(SessionEntity session, Vector3 position, int Random_Num)
     {
         Session = session;
 
-        View = GameObject.Instantiate(F.Prefabs.Enemy);
+        if (Random_Num == 0) { View = GameObject.Instantiate(F.Prefabs.Enemy_1); } // пока так оставлю для случайного врага
+        else if (Random_Num == 1) { View = GameObject.Instantiate(F.Prefabs.Enemy_2); }
+        else if (Random_Num == 2) { View = GameObject.Instantiate(F.Prefabs.Enemy_3); }
+        else if (Random_Num == 3) { View = GameObject.Instantiate(F.Prefabs.Enemy_4); }
+
+      //  View = GameObject.Instantiate(F.Prefabs.Enemy_1);
         View.SetPosition(position);
 
         var ai = View.gameObject.AddComponent<EnemyAI>();
