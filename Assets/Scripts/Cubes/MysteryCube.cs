@@ -47,6 +47,39 @@ public class MysteryCube : MonoBehaviour
         transform.localPosition = finishPosition;
     }
 
+    public void Shoot(UnitEntity target)
+    {
+        StartCoroutine(Shooting(target));
+    }
+
+    IEnumerator Shooting(UnitEntity target)
+    {
+        var startPosition = Position; 
+        var middlePoint = Entity.Session.Player.Position + F.Settings.CubePlayerAttackOffset;
+        middlePoint.x += UnityEngine.Random.Range(-F.Settings.CubeMiddlePointRadius, F.Settings.CubeMiddlePointRadius);
+        middlePoint.z += UnityEngine.Random.Range(-F.Settings.CubeMiddlePointRadius, F.Settings.CubeMiddlePointRadius);
+
+        var rotation = transform.rotation;
+        var rotationAngle = new Vector3()
+        {
+            x = UnityEngine.Random.Range(-F.Settings.CubeAttackRotation, F.Settings.CubeAttackRotation),
+            y = UnityEngine.Random.Range(-F.Settings.CubeAttackRotation, F.Settings.CubeAttackRotation),
+            z = UnityEngine.Random.Range(-F.Settings.CubeAttackRotation, F.Settings.CubeAttackRotation)
+        };
+        var finishRotation = Quaternion.Euler(rotationAngle);
+
+        Collider.isTrigger = true;
+        for (float t = 0f; t < 1; t += Time.deltaTime / F.Settings.CubeAttackTime)
+        {
+            transform.position = GetQuadraticBezierPoint(startPosition, middlePoint, target.Position, t);
+            transform.rotation = Quaternion.Lerp(rotation, finishRotation, t);
+
+            yield return null;
+        }
+        target.Kill();
+        Destroy(gameObject);
+    }
+
     Vector3 GetQuadraticBezierPoint (Vector3 p0, Vector3 p1, Vector3 p2, float t)
     {
         var p0p1 = (1 - t) * p0 + t * p1;

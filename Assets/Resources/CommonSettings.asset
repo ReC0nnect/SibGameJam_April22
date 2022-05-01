@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd94ec3f92c05174ebd7866a0b609a60, type: 3}
   m_Name: CommonSettings
   m_EditorClassIdentifier: 
-  EnemySpawnRadius: 15
   PlayerSpeed: 4
-  CubesCount: 6
+  CubePlayerOffset: {x: 0, y: -3, z: 0}
+  CubePlayerAttackOffset: {x: 0, y: 5, z: 0}
+  CubeAttackRotation: 360
+  CubeMiddlePointRadius: 5
   CubeRadius: 3
   CubeMovingSpeed: 5
-  CubeMiddlePointRadius: 5
-  CubePlayerOffset: {x: 0, y: -3, z: 0}
+  CubeAttackTime: 1
+  EnemySpawnRadius: 15
+  EnemySpawnDelay: 3
+  EnemyMovingSpeed: 3

@@ -106,7 +106,7 @@ public class CubeController
     {
         MoveCubes();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && Session.Enemy.HasEnemy)
         {
             Shoot();
         }
@@ -142,7 +142,8 @@ public class CubeController
     void Shoot()
     {
         var farrestCube = Cubes.OrderByDescending(c => (Session.Player.Position - c.Position).sqrMagnitude).First();
+        
         Cubes.Remove(farrestCube);
-        farrestCube.Cube.Destroy();
+        farrestCube.Cube.Shoot(Session.Enemy.GetNearestOfPlayer());
     }
 }

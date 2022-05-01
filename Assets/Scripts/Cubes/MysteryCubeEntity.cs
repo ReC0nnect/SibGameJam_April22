@@ -32,4 +32,9 @@ public class MysteryCubeEntity
     {
         GameObject.Destroy(View.gameObject);
     }
+
+    public void Shoot(UnitEntity target)
+    {
+        View.Shoot(target);
+    }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class UnitEntity
     public UnitView View { get; }
     public SessionEntity Session { get; }
     public Vector3 Position => View.Position;
+
+    public event Action<UnitEntity> OnDeath;
 
     public UnitEntity(SessionEntity session)
     {
@@ -29,5 +32,11 @@ public class UnitEntity
 
         var ai = View.gameObject.AddComponent<EnemyAI>();
         ai.Init(session);
+    }
+
+    public void Kill()
+    {
+        OnDeath?.Invoke(this);
+        GameObject.Destroy(View.gameObject);
     }
 }

@@ -11,9 +11,12 @@ public class CommonSettings : ScriptableObject
     
     [Header("Cube")]
     public Vector3 CubePlayerOffset = new Vector3(0f, -5f, 0f);
+    public Vector3 CubePlayerAttackOffset = new Vector3(0f, 5f, 0f);
+    public float CubeAttackRotation = 960f;
     public float CubeMiddlePointRadius = 5f;
     public float CubeRadius = 5f;
     public float CubeMovingSpeed = 5f;
+    public float CubeAttackTime = 5f;
 
     [Header("Enemies")]
     public float EnemySpawnRadius = 15f;

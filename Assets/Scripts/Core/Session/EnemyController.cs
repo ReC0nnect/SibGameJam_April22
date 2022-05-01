@@ -1,15 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EnemyController
 {
     float SpawnTime;
 
-    public List<UnitEntity> Enemies { get; private set; }
-
     SessionEntity Session { get; }
+
+    public List<UnitEntity> Enemies { get; private set; }
+    public bool HasEnemy => Enemies.Count > 0;
+
 
     public EnemyController(SessionEntity session)
     {
@@ -36,5 +39,21 @@ public class EnemyController
 
         var enemyEntity = new UnitEntity(Session, enemyPos);
         Enemies.Add(enemyEntity);
+        enemyEntity.OnDeath += EnemyDeath;
+    }
+
+    void EnemyDeath(UnitEntity enemy)
+    {
+        enemy.OnDeath -= EnemyDeath;
+        Enemies.Remove(enemy);
+    }
+
+    public UnitEntity GetNearestOfPlayer()
+    {
+        if (HasEnemy)
+        {
+            return Enemies.OrderBy(e => (e.Position - Session.Player.Position).sqrMagnitude).First();
+        }
+        return null;
     }
 }
