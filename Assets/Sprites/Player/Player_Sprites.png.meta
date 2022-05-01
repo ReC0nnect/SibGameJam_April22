@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_Front_0
+      name: Player_Down_0
       rect:
         serializedVersion: 2
         x: 1
@@ -149,7 +149,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Front_1
+      name: Player_Down_1
       rect:
         serializedVersion: 2
         x: 34
@@ -170,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Front_2
+      name: Player_Down_2
       rect:
         serializedVersion: 2
         x: 67
@@ -254,7 +254,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Back_0
+      name: Player_Go_Up_0
       rect:
         serializedVersion: 2
         x: 1
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Back_1
+      name: Player_Go_Up_1
       rect:
         serializedVersion: 2
         x: 34
@@ -296,7 +296,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Back_2
+      name: Player_Go_Up_2
       rect:
         serializedVersion: 2
         x: 67
@@ -317,7 +317,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Back_Side_0
+      name: Player_Go_Up_Side_0
       rect:
         serializedVersion: 2
         x: 1
@@ -338,7 +338,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Back_Side_1
+      name: Player_Go_Up_Side_1
       rect:
         serializedVersion: 2
         x: 34
@@ -359,7 +359,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Back_Side_2
+      name: Player_Go_Up_Side_2
       rect:
         serializedVersion: 2
         x: 67
@@ -527,7 +527,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Front_3
+      name: Player_Down_3
       rect:
         serializedVersion: 2
         x: 100
@@ -548,7 +548,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Front_4
+      name: Player_Down_4
       rect:
         serializedVersion: 2
         x: 133
@@ -611,7 +611,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Back_Side_3
+      name: Player_Go_Up_Side_3
       rect:
         serializedVersion: 2
         x: 100
@@ -808,7 +808,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -829,7 +829,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -850,7 +850,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -871,7 +871,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -892,7 +892,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -913,7 +913,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -934,7 +934,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -955,7 +955,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -976,7 +976,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -997,7 +997,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1018,7 +1018,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1039,7 +1039,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1060,7 +1060,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1081,7 +1081,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1102,7 +1102,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1123,7 +1123,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1144,7 +1144,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1165,7 +1165,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1173,6 +1173,132 @@ TextureImporter:
       bones: []
       spriteID: 28ae4a3b910ab264aa3cf7d1e777857b
       internalID: 72476887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Go_Up_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 316
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae834f0995c24a46aee085a1a2cbd83
+      internalID: 714098152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Go_Up_4
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 316
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3421c6d39d3a46346bf2204dd9e00f32
+      internalID: -2022953267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Down_5
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 414
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f53b561956dcc4a9cc45831c0236fd
+      internalID: -1826789178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Side_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 218
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ce5e6a92b851c44896d4b0fff15ca3
+      internalID: -969237351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Side_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 218
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d99ec1e145e8a0f4f80fdc687faf45b6
+      internalID: 322161017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Go_Up_Side_4
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 267
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34547a4016cab142a74bafe94b2f195
+      internalID: 1103480639
       vertices: []
       indices: 
       edges: []
@@ -1191,53 +1317,59 @@ TextureImporter:
       Player_Attack: -2073580544
       Enemy_Var2_0: -1640442567
       Enemy_Ghost_1: 269285715
+      Player_Go_Up_Side_0: 2096106838
       Enemy_Var2_2: 1558512010
-      Player_Front_2: -587460451
+      Player_Go_Up_4: -2022953267
+      Player_Go_Up_Side_3: 2002746559
+      Player_Go_Up_0: 2045138165
       Enemy_Ghost_4: 740479044
       Enemy_Var1_3: 2026419712
       Enemy_Var3_0: 1542112584
+      Player_Go_Up_3: 714098152
       Enemy_Ghost_2: -761815560
       Enemy_Var1_4: -1451788372
       Enemy_Var3_2: 792997346
       Player_Front_Side_2: 786995083
       Enemy_Var1_2: 655495140
-      Player_Front_3: 1813245295
       Enemy_Var2_5: 468422079
+      Player_Side_Walk_4: -969237351
       Player_Idle_2: 820584783
       Enemy_Var2_3: -1231768817
       Player_Front_Side_1: -156910292
-      Player_Back_1: 2028350958
       Enemy_Ghost_0: 1815464805
-      Player_Hand: -1094340535
       Enemy_Ghost_5: -508337297
+      Player_Hand: -1094340535
+      Player_Down_5: -1826789178
       Player_Side_Walk_0: 1321643027
+      Player_Down_4: 1613259382
       Player_Idle_1: 258121438
       Player_Idle_0: -2087377303
+      Player_Down_2: -587460451
       Enemy_Var2_1: 295523732
-      Player_Back_Side_2: -708067855
       Enemy_Var3_3: -957174765
+      Player_Down_1: -178014329
       Enemy_Ghost_3: 153762803
-      Player_Front_0: 692210839
-      Player_Front_1: -178014329
+      Player_Go_Up_Side_4: 1103480639
       Player_Front_Side_0: 1160177991
       Enemy_Var1_0: -289714113
-      Player_Back_0: 2045138165
-      Player_Back_Side_0: 2096106838
-      Enemy_Var1_5: 1844260788
       Enemy_Var3_5: 72476887
-      Player_Back_2: -2000776717
+      Enemy_Var1_5: 1844260788
       Player_Side_Walk_2: -286730402
       Enemy_Var3_1: -953555060
-      Player_Back_Side_1: -1371233849
+      Player_Go_Up_2: -2000776717
+      Player_Go_Up_Side_1: -1371233849
       Player_Front_Side_4: 1056246020
       Enemy_Var1_1: -824574396
       Enemy_Var3_4: 505763300
       Player_Side_Walk_3: -2139446931
       Player_Side_Walk_1: -676747913
       Enemy_Var2_4: -19056293
+      Player_Side_Walk_5: 322161017
+      Player_Down_3: 1813245295
+      Player_Go_Up_1: 2028350958
       Player_Front_Side_3: 1354664474
-      Player_Front_4: 1613259382
-      Player_Back_Side_3: 2002746559
+      Player_Down_0: 692210839
+      Player_Go_Up_Side_2: -708067855
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
