@@ -118,7 +118,7 @@ public class CubeController
         var sqrRadius = radiusInBlocks * radiusInBlocks;
         for (int i = 0; i < Cubes.Count; i++)
         {
-            var sqrMagnitude = (Cubes[i].Position - Session.PlayerEntity.Position).sqrMagnitude;
+            var sqrMagnitude = (Cubes[i].Position - Session.Player.Position).sqrMagnitude;
             if (sqrMagnitude > sqrRadius)
             {
                 MoveCubeByIndex(i, sqrMagnitude);
@@ -128,9 +128,9 @@ public class CubeController
 
     void MoveCubeByIndex(int index, float magnitude)
     {
-        var nearestSocketPos = Sockets.OrderBy(s => (Session.PlayerEntity.Position - s).sqrMagnitude).First();
+        var nearestSocketPos = Sockets.OrderBy(s => (Session.Player.Position - s).sqrMagnitude).First();
 
-        if ((Session.PlayerEntity.Position - nearestSocketPos).sqrMagnitude < magnitude)
+        if ((Session.Player.Position - nearestSocketPos).sqrMagnitude < magnitude)
         {
             Cubes[index].Cube.UpdatePosition(nearestSocketPos);
             Cubes[index].Position = nearestSocketPos;
@@ -141,7 +141,7 @@ public class CubeController
 
     void Shoot()
     {
-        var farrestCube = Cubes.OrderByDescending(c => (Session.PlayerEntity.Position - c.Position).sqrMagnitude).First();
+        var farrestCube = Cubes.OrderByDescending(c => (Session.Player.Position - c.Position).sqrMagnitude).First();
         Cubes.Remove(farrestCube);
         farrestCube.Cube.Destroy();
     }

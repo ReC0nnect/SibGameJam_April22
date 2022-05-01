@@ -7,8 +7,7 @@ public class SessionEntity
 {
     public static SessionEntity Current;
 
-    [Obsolete] public UnitView Player { get; private set; } //TODO OBSOLETE
-    public UnitEntity PlayerEntity { get; private set; }
+    public UnitEntity Player { get; private set; }
     public EnemyController Enemy { get; private set; }
     public CubeController Cube { get; private set; }
 
@@ -27,13 +26,8 @@ public class SessionEntity
 
     void Init()
     {
-        InitPlayer();
+        Player = new UnitEntity(this);
         Enemy = new EnemyController(this);
         Cube = new CubeController(this);
-    }
-
-    void InitPlayer()
-    {
-        PlayerEntity = new UnitEntity(this);
     }
 }

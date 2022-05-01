@@ -24,7 +24,7 @@ public class EnemyAI : MonoBehaviour
     {
         Session = session;
 
-        Target = session.PlayerEntity;
+        Target = session.Player;
     }
 
     void Update()
