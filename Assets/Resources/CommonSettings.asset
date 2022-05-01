@@ -18,7 +18,7 @@ MonoBehaviour:
   CubeAttackRotation: 360
   CubeMiddlePointRadius: 5
   CubeRadius: 3
-  CubeMovingSpeed: 5
+  CubeMovingSpeed: 4
   CubeAttackTime: 1
   EnemySpawnRadius: 15
   EnemySpawnDelay: 3

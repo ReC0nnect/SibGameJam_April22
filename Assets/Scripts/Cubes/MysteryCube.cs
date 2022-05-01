@@ -37,14 +37,24 @@ public class MysteryCube : MonoBehaviour
         middle2Point.x += UnityEngine.Random.Range(-F.Settings.CubeMiddlePointRadius, F.Settings.CubeMiddlePointRadius);
         middle2Point.z += UnityEngine.Random.Range(-F.Settings.CubeMiddlePointRadius, F.Settings.CubeMiddlePointRadius);
 
+        var randValue = Mathf.Round(UnityEngine.Random.value * 1000f);
+        var rotationAngle = new Vector3
+        {
+            x = randValue % 2f == 0f ? F.Settings.CubeAttackRotation : 0f,
+            y = randValue % 3f == 0f ? F.Settings.CubeAttackRotation : 0f,
+            z = randValue % 5f == 0f ? F.Settings.CubeAttackRotation : 0f
+        };
+
         Collider.isTrigger = true;
         for (float t = 0f; t < 1; t += Time.deltaTime * F.Settings.CubeMovingSpeed)
         {
             transform.localPosition = GetCubicBezierPoint(startPosition, middle1Point, middle2Point, finishPosition, t);
+            transform.rotation = Quaternion.Euler(rotationAngle * t);
             yield return null;
         }
         Collider.isTrigger = false;
         transform.localPosition = finishPosition;
+        transform.rotation = Quaternion.identity;
     }
 
     public void Shoot(UnitEntity target)
@@ -59,21 +69,19 @@ public class MysteryCube : MonoBehaviour
         middlePoint.x += UnityEngine.Random.Range(-F.Settings.CubeMiddlePointRadius, F.Settings.CubeMiddlePointRadius);
         middlePoint.z += UnityEngine.Random.Range(-F.Settings.CubeMiddlePointRadius, F.Settings.CubeMiddlePointRadius);
 
-        var rotation = transform.rotation;
-        var rotationAngle = new Vector3()
+        var randValue = Mathf.Round(UnityEngine.Random.value * 1000f);
+        var rotationAngle = new Vector3
         {
-            x = UnityEngine.Random.Range(-F.Settings.CubeAttackRotation, F.Settings.CubeAttackRotation),
-            y = UnityEngine.Random.Range(-F.Settings.CubeAttackRotation, F.Settings.CubeAttackRotation),
-            z = UnityEngine.Random.Range(-F.Settings.CubeAttackRotation, F.Settings.CubeAttackRotation)
+            x = randValue % 2f == 0f ? F.Settings.CubeAttackRotation : 0f,
+            y = randValue % 3f == 0f ? F.Settings.CubeAttackRotation : 0f,
+            z = randValue % 5f == 0f ? F.Settings.CubeAttackRotation : 0f
         };
-        var finishRotation = Quaternion.Euler(rotationAngle);
 
         Collider.isTrigger = true;
         for (float t = 0f; t < 1; t += Time.deltaTime / F.Settings.CubeAttackTime)
         {
             transform.position = GetQuadraticBezierPoint(startPosition, middlePoint, target.Position, t);
-            transform.rotation = Quaternion.Lerp(rotation, finishRotation, t);
-
+            transform.rotation = Quaternion.Euler(rotationAngle * t);
             yield return null;
         }
         target.Kill();
