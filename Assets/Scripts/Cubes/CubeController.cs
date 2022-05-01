@@ -105,6 +105,7 @@ public class CubeController
             freeCube.SetCaptured(true);
             Cubes.Add(new MysteryCubeInfo(freeCube, freeCube.Position));
             FreeCubes.Remove(freeCube);
+            AddFreeCube();
 
             if (updateSockets)
             {
