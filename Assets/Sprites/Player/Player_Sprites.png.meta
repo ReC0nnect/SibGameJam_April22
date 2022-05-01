@@ -451,7 +451,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -459,6 +459,174 @@ TextureImporter:
       bones: []
       spriteID: 6cc9d0936d5e8a847a5f0542048276f1
       internalID: 1321643027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Side_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 218
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88bdaa24caffed340a98a1b93b3c0ad6
+      internalID: -676747913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Side_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 218
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 743dad3253d818c4c91122f1c182e774
+      internalID: -286730402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Side_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 218
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56b7d2d67ba8ae42af2c240d9b69bc6
+      internalID: -2139446931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Front_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 414
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2819f718fca048642b7571128ec0e2fd
+      internalID: 1813245295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Front_4
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 414
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59045dca5461bd4f88781c5bc7510f4
+      internalID: 1613259382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Front_Side_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 365
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a0b8801523d68478853d4abbb00a1c
+      internalID: 1354664474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Front_Side_4
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 365
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0304a791c7db5f84590657721ffab6da
+      internalID: 1056246020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Back_Side_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 267
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 039f9456ad6fde94e96e29883b38eadc
+      internalID: 2002746559
       vertices: []
       indices: 
       edges: []
@@ -485,11 +653,19 @@ TextureImporter:
       Player_Back_0: 2045138165
       Player_Back_Side_0: 2096106838
       Player_Back_2: -2000776717
+      Player_Side_Walk_2: -286730402
       Player_Front_Side_2: 786995083
       Player_Back_Side_1: -1371233849
+      Player_Front_3: 1813245295
+      Player_Front_Side_4: 1056246020
       Player_Idle_2: 820584783
+      Player_Side_Walk_3: -2139446931
       Player_Front_Side_1: -156910292
+      Player_Side_Walk_1: -676747913
       Player_Back_1: 2028350958
+      Player_Front_Side_3: 1354664474
+      Player_Front_4: 1613259382
+      Player_Back_Side_3: 2002746559
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

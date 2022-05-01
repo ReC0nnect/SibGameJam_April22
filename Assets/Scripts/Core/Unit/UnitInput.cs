@@ -59,12 +59,12 @@ public class UnitInput : MonoBehaviour
         }
         
 
-        if (direction.x < 0 || (direction.x < 0 && direction.z < 0))
+        if (direction.x < 0)
         {
             side = 1;
             Anim.Flip(side);
         }
-        else if (direction.x > 0 || (direction.x > 0 && direction.z > 0))
+        else if (direction.x > 0)
         {
             side = -1;
             Anim.Flip(side);

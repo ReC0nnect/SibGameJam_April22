@@ -29,18 +29,6 @@ public class Animation_Script : MonoBehaviour
 
     public void Flip(int side)
     {
-
-        /*  if (move.wallGrab || move.wallSlide)
-          {
-              if (side == -1 && sr.flipX)
-                  return;
-
-              if (side == 1 && !sr.flipX)
-              {
-                  return;
-              }
-          }
-          */
         bool state = (side == 1) ? false : true;
         Player_Sprite.flipX = state;
     }
