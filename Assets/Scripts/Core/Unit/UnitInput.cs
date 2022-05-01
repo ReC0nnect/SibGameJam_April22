@@ -53,6 +53,11 @@ public class UnitInput : MonoBehaviour
         {
             UnitView.SetVelocity(direction.normalized * F.Settings.PlayerSpeed);
         }
+        else
+        {
+            UnitView.Stop(); //TODO 1
+        }
+        
 
         if (direction.x < 0 || (direction.x < 0 && direction.z < 0))
         {

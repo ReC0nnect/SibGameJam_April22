@@ -6,6 +6,6 @@ using UnityEngine;
 //[CreateAssetMenu(fileName = "PrefabSettings", menuName = "Create Prefab Settings")]
 public class PrefabSettings : ScriptableObject
 {
-    public GameObject Enemy;
+    public UnitView Enemy;
     public MysteryCube Cube;
 }

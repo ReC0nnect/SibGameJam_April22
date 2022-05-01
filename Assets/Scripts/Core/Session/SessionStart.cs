@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class SessionStart : MonoBehaviour
 {
+    SessionEntity Session;
+
     void Awake()
     {
-        SessionEntity.Create();
+        Session = SessionEntity.Create();
     }
 
     void Update()
     {
-        SessionEntity.Update();
+        Session.Update();
     }
 }

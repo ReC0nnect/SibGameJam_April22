@@ -7,35 +7,33 @@ public class SessionEntity
 {
     public static SessionEntity Current;
 
-    public UnitView Player;
-    public EnemyController EnemyController;
-    public CubeController Cube;
+    [Obsolete] public UnitView Player { get; private set; } //TODO OBSOLETE
+    public UnitEntity PlayerEntity { get; private set; }
+    public EnemyController Enemy { get; private set; }
+    public CubeController Cube { get; private set; }
 
-    public static void Create()
+    public static SessionEntity Create()
     {
         Current = new SessionEntity();
         Current.Init();
+        return Current;
     }
 
-    public static void Update()
+    public void Update()
     {
-        Current.Cube.Update();
+        Cube.Update();
+        Enemy.Update();
     }
 
     void Init()
     {
         InitPlayer();
-        EnemyController = new EnemyController(this);
+        Enemy = new EnemyController(this);
         Cube = new CubeController(this);
     }
 
     void InitPlayer()
     {
-        var playerGo = GameObject.FindGameObjectWithTag("Player");
-        if (playerGo)
-        {
-            Player = playerGo.GetComponent<UnitView>();
-            Player.Init(this);
-        }
+        PlayerEntity = new UnitEntity(this);
     }
 }

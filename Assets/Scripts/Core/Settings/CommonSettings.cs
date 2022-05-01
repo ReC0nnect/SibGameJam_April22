@@ -6,11 +6,17 @@ using UnityEngine;
 //[CreateAssetMenu(fileName = "CommonSettings", menuName = "Create Common Settings")]
 public class CommonSettings : ScriptableObject
 {
-    public float EnemySpawnRadius = 15f;
+    [Header("Player")]
     public float PlayerSpeed = 5f;
-    public int CubesCount = 32;
+    
+    [Header("Cube")]
+    public Vector3 CubePlayerOffset = new Vector3(0f, -5f, 0f);
+    public float CubeMiddlePointRadius = 5f;
     public float CubeRadius = 5f;
     public float CubeMovingSpeed = 5f;
-    public float CubeMiddlePointRadius = 5f;
-    public Vector3 CubePlayerOffset = new Vector3(0f, -5f, 0f);
+
+    [Header("Enemies")]
+    public float EnemySpawnRadius = 15f;
+    public float EnemySpawnDelay = 15f;
+    public float EnemyMovingSpeed = 3f;
 }

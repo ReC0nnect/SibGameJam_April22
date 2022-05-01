@@ -3,14 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class UnitView : MonoBehaviour
 {
-    SessionEntity Session;
+    UnitEntity Entity;
+
 
     Rigidbody RigidbodyCached;
-
-    public Vector3 Position => transform.position;
-
     Rigidbody Rigidbody {
         get {
             if (!RigidbodyCached)
@@ -21,13 +20,25 @@ public class UnitView : MonoBehaviour
         }
     }
 
-    public void Init(SessionEntity session)
+    public Vector3 Position => transform.position;
+
+    public void SetEntity(UnitEntity entity)
     {
-        Session = session;
+        Entity = entity;
+    }
+
+    public void SetPosition(Vector3 position)
+    {
+        transform.position = position;
     }
 
     public void SetVelocity(Vector3 velocity)
     {
         Rigidbody.velocity = velocity;
+    }
+
+    public void Stop()
+    {
+        Rigidbody.velocity = Vector3.zero;
     }
 }
