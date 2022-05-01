@@ -104,23 +104,45 @@ public class CubeController
 
     public void Update()
     {
-        var sqrRadius = F.Settings.CubeRadius * F.Settings.CubeRadius;
+        MoveCubes();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Shoot();
+        }
+    }
+
+    void MoveCubes()
+    {
+        var radiusInBlocks = (Mathf.Sqrt(Cubes.Count)) / 2f + 1f;
+        var sqrRadius = radiusInBlocks * radiusInBlocks;
         for (int i = 0; i < Cubes.Count; i++)
         {
-            if ((Cubes[i].Position - Session.Player.Position).sqrMagnitude > sqrRadius)
+            var sqrMagnitude = (Cubes[i].Position - Session.Player.Position).sqrMagnitude;
+            if (sqrMagnitude > sqrRadius)
             {
-                MoveCubeByIndex(i);
+                MoveCubeByIndex(i, sqrMagnitude);
             }
         }
     }
 
-    void MoveCubeByIndex(int index)
+    void MoveCubeByIndex(int index, float magnitude)
     {
         var nearestSocketPos = Sockets.OrderBy(s => (Session.Player.Position - s).sqrMagnitude).First();
 
-        Cubes[index].Cube.UpdatePosition(nearestSocketPos);
-        Cubes[index].Position = Cubes[index].Cube.Position;
+        if ((Session.Player.Position - nearestSocketPos).sqrMagnitude < magnitude)
+        {
+            Cubes[index].Cube.UpdatePosition(nearestSocketPos);
+            Cubes[index].Position = Cubes[index].Cube.Position;
 
-        UpdateSockets();
+            UpdateSockets();
+        }
+    }
+
+    void Shoot()
+    {
+        var farrestCube = Cubes.OrderByDescending(c => (Session.Player.Position - c.Position).sqrMagnitude).First();
+        Cubes.Remove(farrestCube);
+        farrestCube.Cube.Destroy();
     }
 }

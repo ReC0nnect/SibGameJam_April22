@@ -27,4 +27,9 @@ public class MysteryCubeEntity
     {
         View.SetPosition(position);
     }
+
+    public void Destroy()
+    {
+        GameObject.Destroy(View.gameObject);
+    }
 }
