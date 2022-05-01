@@ -54,12 +54,19 @@ public class UnitInput : MonoBehaviour
             UnitView.SetVelocity(direction.normalized * F.Settings.PlayerSpeed);
         }
 
-        if (direction.x < 0)
+        if (direction.x < 0 || (direction.x < 0 && direction.z < 0))
+        {
+            side = 1;
+            Anim.Flip(side);
+        }
+        else if (direction.x > 0 || (direction.x > 0 && direction.z > 0))
         {
             side = -1;
             Anim.Flip(side);
         }
 
-        Anim.SetHorizontalMovement(direction.x, direction.y);
+
+        Anim.SetHorizontalMovement(direction.x, direction.z);
+
     }
 }
