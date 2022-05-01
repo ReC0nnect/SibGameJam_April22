@@ -27,9 +27,8 @@ public class Animation_Script : MonoBehaviour
         //anim.SetFloat("VerticalVelocity", yVel);
     }
 
-    public void Flip(int side)
+    public void Flip(bool state)
     {
-        bool state = (side == 1) ? false : true;
         Player_Sprite.flipX = state;
     }
 }

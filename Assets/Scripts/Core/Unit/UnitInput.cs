@@ -7,7 +7,6 @@ using UnityEngine;
 public class UnitInput : MonoBehaviour
 {
     public Animation_Script Anim;
-    private int side;
 
     UnitView UnitViewCached;
     UnitView UnitView {
@@ -28,15 +27,18 @@ public class UnitInput : MonoBehaviour
     void Movement()
     {
         var direction = Vector3.zero;
+        var isRight = false;
         if (Input.GetKey(KeyCode.D))
         {
             direction.x += 1f;
             direction.z += 1f;
+            isRight = true;
         }
         if (Input.GetKey(KeyCode.A))
         {
             direction.x += -1f;
             direction.z += -1f;
+            isRight = false;
         }
         if (Input.GetKey(KeyCode.W))
         {
@@ -57,21 +59,8 @@ public class UnitInput : MonoBehaviour
         {
             UnitView.Stop(); //TODO 1
         }
-        
 
-        if (direction.x < 0)
-        {
-            side = 1;
-            Anim.Flip(side);
-        }
-        else if (direction.x > 0)
-        {
-            side = -1;
-            Anim.Flip(side);
-        }
-
-
+        Anim.Flip(isRight);
         Anim.SetHorizontalMovement(direction.x, direction.z);
-
     }
 }
