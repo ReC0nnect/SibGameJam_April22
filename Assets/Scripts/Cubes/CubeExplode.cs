@@ -15,7 +15,6 @@ public class CubeExplode : MonoBehaviour
         RB = GetComponent<Rigidbody>();
 
         RandomNum = Random.Range(-2,3);
-        
     }
 
     private void Update()

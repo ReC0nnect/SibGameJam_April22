@@ -13,6 +13,7 @@ public class MysteryCube : MonoBehaviour
 
     [SerializeField] GameObject OuterCube;
     [SerializeField] GameObject InnerCubes;
+    [SerializeField] string HitSound = "Hit_Sound";
 
     MysteryCubeEntity Entity;
     Vector3? LastTargetPosition;
@@ -115,6 +116,8 @@ public class MysteryCube : MonoBehaviour
         }
         OuterCube.SetActive(false);
         InnerCubes.SetActive(true);
+
+        Entity.Session.SFX.Play(HitSound);
 
         yield return new WaitForSeconds(3f);
         Destroy(gameObject);

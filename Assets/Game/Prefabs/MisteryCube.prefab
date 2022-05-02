@@ -3208,6 +3208,7 @@ MonoBehaviour:
   IsPortalFrame: 0
   OuterCube: {fileID: 1668708162916935379}
   InnerCubes: {fileID: 5940582033843037401}
+  HitSound: Cube_Explode
 --- !u!1 &8452189069768249997
 GameObject:
   m_ObjectHideFlags: 0
