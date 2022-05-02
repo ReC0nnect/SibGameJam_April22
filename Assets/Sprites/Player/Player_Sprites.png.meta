@@ -1597,6 +1597,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Player_Dead
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 169
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef91b08caafb46d4087b504b8626c040
+      internalID: -321212988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1629,6 +1650,7 @@ TextureImporter:
       Fire_5: 1260361041
       Player_Front_Side_2: 786995083
       Enemy_Var1_2: 655495140
+      Player_Dead: -321212988
       Enemy_Var2_5: 468422079
       Player_Side_Walk_4: -969237351
       Player_Idle_2: 820584783
