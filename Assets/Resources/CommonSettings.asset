@@ -12,19 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd94ec3f92c05174ebd7866a0b609a60, type: 3}
   m_Name: CommonSettings
   m_EditorClassIdentifier: 
-  PlayerSpeed: 8
+  PlayerSpeed: 4
+  FollowMovingSpeed: 6
+  FolowerSpawnRange: {x: 8, y: 14}
+  LevelWithFollower: 1
   CubePlayerOffset: {x: 0, y: -3, z: 0}
   CubePlayerAttackOffset: {x: 0, y: 5, z: 0}
   CubeAttackRotation: 360
   CubeMiddlePointRadius: 5
   CubeRadius: 3
-  CubeMovingSpeed: 8
+  CubeMovingSpeed: 4
   CubeAttackTime: 1
   FreeCubeRange: {x: 32, y: 48}
   FreeCubeCount: 16
   FreeCubeMaxDistance: 48
-  EnemySpawnRadius: 15
-  EnemySpawnDelay: 15
+  EnemySpawnRadius: 20
+  EnemySpawnDelay: 13
   EnemyMovingSpeed: 3
   PortalSpawnRange: {x: 32, y: 64}
   PortalFrameSpawnRange: {x: 24, y: 48}
