@@ -228,6 +228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17200184302dafd4285296e02bc08c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  View: {fileID: 8475249096522111739}
+  ControlFlip: 1
 --- !u!1 &6673890235443715173
 GameObject:
   m_ObjectHideFlags: 0

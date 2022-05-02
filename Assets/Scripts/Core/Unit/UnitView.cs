@@ -6,8 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class UnitView : MonoBehaviour
 {
+    [SerializeField] SpriteRenderer View;
+    [SerializeField] bool ControlFlip;
     public UnitEntity Entity { get; private set; }
-
 
     Rigidbody RigidbodyCached;
     Rigidbody Rigidbody {
@@ -35,6 +36,13 @@ public class UnitView : MonoBehaviour
     public void SetVelocity(Vector3 velocity)
     {
         Rigidbody.velocity = velocity;
+
+        if (ControlFlip)
+        {
+            View.flipX = !(velocity.x > 0f && velocity.z > 0f 
+                || velocity.normalized.x > -0.5f && velocity.z > 0f
+                || velocity.x > 0f && velocity.normalized.z > -0.5f);
+        }
     }
 
     public void AddVelocity(Vector3 velocity)

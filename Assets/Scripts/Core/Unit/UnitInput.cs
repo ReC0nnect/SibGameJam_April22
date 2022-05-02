@@ -80,9 +80,6 @@ public class UnitInput : MonoBehaviour
             UnitView.Stop(); //TODSO 1
         }
 
-
-   
-
         Anim.Flip(isRight);
         Anim.SetHorizontalMovement(direction.x, direction.z);
     }

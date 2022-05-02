@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85a185d76a73a494c845c93e1af80a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OneStep: 0
+  OneStep: 1
 --- !u!95 &6676691593009075
 Animator:
   serializedVersion: 4
@@ -228,6 +228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17200184302dafd4285296e02bc08c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  View: {fileID: 6967201542284373126}
+  ControlFlip: 1
 --- !u!1 &5309797883898063384
 GameObject:
   m_ObjectHideFlags: 0
