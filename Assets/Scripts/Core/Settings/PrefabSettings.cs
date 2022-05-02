@@ -20,4 +20,5 @@ public class PrefabSettings : ScriptableObject
     public MysteryCube PortalFrameCube;
     public PortalFrame PortalFrame;
     public PortalVortex PortalVortex;
+    public PortalTip PortalTip;
 }

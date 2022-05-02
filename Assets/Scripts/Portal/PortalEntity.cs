@@ -25,6 +25,7 @@ public class PortalEntity
     List<Vector3> EntranceBlocks { get; }
     public SessionEntity Session { get; }
     public Vector3 Position { get; }
+    public Vector3 NormalizedPosition => Position + Vector3.down * Session.LevelNumber * F.Settings.LevelDistance;
     public int PortalFrameLeft => F.Settings.PortalFrameCount - Frames.Count;
     public bool IsActivated { get; private set; }
 
@@ -127,7 +128,7 @@ public class PortalEntity
     void ActivatePortal()
     {
         IsActivated = true;
-        PortalVortex = PortalVortex.Create(Session, Position + Vector3.down * Session.LevelNumber * F.Settings.LevelDistance);
+        PortalVortex = PortalVortex.Create(Session, NormalizedPosition);
         Debug.LogWarning("Portal activated");
         //TODO 
     }

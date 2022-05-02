@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class Billboard : MonoBehaviour
 {
+    [SerializeField] bool OneStep;
 
-    private Camera Cam;
-    // Start is called before the first frame update
+    Camera Cam;
     void Start()
     {
         Cam = Camera.main;
+        if (OneStep)
+        {
+            transform.rotation = Cam.transform.rotation;    
+        }
     }
 
-    // Update is called once per frame
     void LateUpdate()
     {
-        transform.LookAt(Cam.transform);
+        if (!OneStep)
+        {
+            transform.LookAt(Cam.transform);
+        }
     }
 }

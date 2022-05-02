@@ -7,6 +7,7 @@ public class PortalController
 {
     SessionEntity Session;
     PortalEntity Portal;
+    PortalTip PortalTip;
 
     public Vector3 Position => Portal.Position;
     public bool IsActive => Portal.IsActivated;
@@ -26,6 +27,9 @@ public class PortalController
             {
                 Session.Cube.AddPortalFrame();
             }
+
+            PortalTip = GameObject.Instantiate(F.Prefabs.PortalTip);
+            PortalTip.Init(Portal);
         }
     }
 
@@ -45,6 +49,10 @@ public class PortalController
 
     public void Clear()
     {
+        if (PortalTip)
+        {
+            GameObject.Destroy(PortalTip.gameObject);
+        }
         Portal?.Destroy();
         Portal = null;
     }

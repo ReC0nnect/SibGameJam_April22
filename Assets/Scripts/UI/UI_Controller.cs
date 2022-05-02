@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class UI_Controller : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    static Canvas MainCanvasCached;
+    public static Canvas MainCanvas {
+        get {
+            if (!MainCanvasCached)
+            {
+                var instance = GameObject.FindObjectOfType<UI_Controller>();
+                MainCanvasCached = instance.GetComponent<Canvas>();
+            }
+            return MainCanvasCached;
+        }
     }
 }
