@@ -6,8 +6,7 @@ using UnityEngine;
 public class MysteryCubeEntity
 {
     public SessionEntity Session { get; }
-
-    MysteryCube View;
+    public MysteryCube View { get; private set; }
 
     public MysteryCubeEntity(SessionEntity session)
     {
@@ -15,10 +14,11 @@ public class MysteryCubeEntity
     }
 
     public Vector3 Position => View.Position;
+    public bool IsPortalFrame => View.IsPortalFrame;
 
-    public void CreateView(Transform parent, Vector3 position)
+    public void CreateView(Transform parent, MysteryCube prefab, Vector3 position)
     {
-        View = GameObject.Instantiate(F.Prefabs.Cube, parent);
+        View = GameObject.Instantiate(prefab, parent);
         View.transform.localPosition = position;
         View.Init(this);
     }

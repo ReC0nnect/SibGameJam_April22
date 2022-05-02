@@ -27,4 +27,16 @@ public class CommonSettings : ScriptableObject
     public float EnemySpawnRadius = 15f;
     public float EnemySpawnDelay = 15f;
     public float EnemyMovingSpeed = 3f;
+
+    [Header("Portal")]
+    public Vector2 PortalSpawnRange = new Vector2(32f, 64f);
+    public Vector2 PortalFrameSpawnRange = new Vector2(24f, 48f);
+    public Vector2 PortalFrameStartCount = new Vector2(3f, 8f);
+    public float PortalFrameForbiddenDistanceToPortal = 8f;
+    public int PortalFrameCount = 12;
+    public int PortalEntranceCount = 4;
+
+    [Header("Portal Vortex")]
+    public float PortalVortexAttractRange = 3f;
+    public float PortalVortexAttractForce = 5f;
 }

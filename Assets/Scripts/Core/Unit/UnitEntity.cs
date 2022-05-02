@@ -9,6 +9,8 @@ public class UnitEntity
     public SessionEntity Session { get; }
     public Vector3 Position => View.Position;
 
+    public bool IsAlive { get; private set; } = true;
+
     public event Action<UnitEntity> OnDeath;
 
     public UnitEntity(SessionEntity session)
@@ -43,5 +45,6 @@ public class UnitEntity
     {
         OnDeath?.Invoke(this);
         GameObject.Destroy(View.gameObject);
+        IsAlive = false;
     }
 }

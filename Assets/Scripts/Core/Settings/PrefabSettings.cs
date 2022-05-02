@@ -12,4 +12,7 @@ public class PrefabSettings : ScriptableObject
     public UnitView Enemy_4;
     public MysteryCube Cube;
     public MysteryCube FreeCube;
+    public MysteryCube PortalFrameCube;
+    public PortalFrame PortalFrame;
+    public PortalVortex PortalVortex;
 }

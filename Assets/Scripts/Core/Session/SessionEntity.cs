@@ -10,6 +10,7 @@ public class SessionEntity
     public UnitEntity Player { get; private set; }
     public EnemyController Enemy { get; private set; }
     public CubeController Cube { get; private set; }
+    public PortalController Portal { get; private set; }
 
     public static SessionEntity Create()
     {
@@ -22,6 +23,7 @@ public class SessionEntity
     {
         Cube.Update();
         Enemy.Update();
+        Portal.Update();
     }
 
     void Init()
@@ -29,5 +31,6 @@ public class SessionEntity
         Player = new UnitEntity(this);
         Enemy = new EnemyController(this);
         Cube = new CubeController(this);
+        Portal = new PortalController(this);
     }
 }

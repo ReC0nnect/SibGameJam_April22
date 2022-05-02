@@ -48,6 +48,7 @@ public class EnemyController
     {
         enemy.OnDeath -= EnemyDeath;
         Enemies.Remove(enemy);
+        enemy = null;
     }
 
     public UnitEntity GetNearestOfPlayer()

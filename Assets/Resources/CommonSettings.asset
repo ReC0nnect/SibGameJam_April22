@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd94ec3f92c05174ebd7866a0b609a60, type: 3}
   m_Name: CommonSettings
   m_EditorClassIdentifier: 
-  PlayerSpeed: 4
+  PlayerSpeed: 8
   CubePlayerOffset: {x: 0, y: -3, z: 0}
   CubePlayerAttackOffset: {x: 0, y: 5, z: 0}
   CubeAttackRotation: 360
   CubeMiddlePointRadius: 5
   CubeRadius: 3
-  CubeMovingSpeed: 4
+  CubeMovingSpeed: 8
   CubeAttackTime: 1
   FreeCubeRange: {x: 32, y: 48}
   FreeCubeCount: 16
@@ -26,3 +26,9 @@ MonoBehaviour:
   EnemySpawnRadius: 15
   EnemySpawnDelay: 15
   EnemyMovingSpeed: 3
+  PortalSpawnRange: {x: 32, y: 64}
+  PortalFrameSpawnRange: {x: 24, y: 48}
+  PortalFrameStartCount: {x: 3, y: 8}
+  PortalFrameForbiddenDistanceToPortal: 8
+  PortalFrameCount: 12
+  PortalEntranceCount: 4

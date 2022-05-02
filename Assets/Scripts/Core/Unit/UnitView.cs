@@ -37,6 +37,11 @@ public class UnitView : MonoBehaviour
         Rigidbody.velocity = velocity;
     }
 
+    public void AddVelocity(Vector3 velocity)
+    {
+        Rigidbody.velocity += velocity;
+    }
+
     public void Stop()
     {
         Rigidbody.velocity = Vector3.zero;

@@ -18,3 +18,6 @@ MonoBehaviour:
   Enemy_4: {fileID: 1013696757366125674, guid: 23f4245aac8a4c746967642a23b61ffa, type: 3}
   Cube: {fileID: -1163273833580696268, guid: f383e0c896643a64aae6fea3d7368732, type: 3}
   FreeCube: {fileID: -1163273833580696268, guid: 87fdd690ecc424e459a5116277732c74, type: 3}
+  PortalFrameCube: {fileID: 6147177626294564274, guid: 2372df3ee08b3c443969ae048ae00c6c, type: 3}
+  PortalFrame: {fileID: -6534565057186973096, guid: 2372df3ee08b3c443969ae048ae00c6c, type: 3}
+  PortalVortex: {fileID: 6527085396680174919, guid: 84de2f146d54b434ea72298f5b6bd766, type: 3}

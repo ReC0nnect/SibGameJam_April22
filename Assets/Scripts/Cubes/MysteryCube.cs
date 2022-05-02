@@ -9,8 +9,10 @@ public class MysteryCube : MonoBehaviour
     [SerializeField] Material DefaultMaterial;
     [SerializeField] Material FreeMaterial;
     [SerializeField] MeshRenderer Mesh;
+    [SerializeField] public bool IsPortalFrame;
 
     MysteryCubeEntity Entity;
+    Vector3? LastTargetPosition;
 
     public Vector3 Position => transform.localPosition;
 
@@ -21,9 +23,14 @@ public class MysteryCube : MonoBehaviour
 
     public void SetPosition(Vector3 position)
     {
-        StartCoroutine(BezierMoving(position));
+        if (MovingCoroutine != null)
+        {
+            StopCoroutine(MovingCoroutine);
+        }
+        MovingCoroutine = StartCoroutine(BezierMoving(position));
     }
 
+    Coroutine MovingCoroutine;
     IEnumerator BezierMoving(Vector3 finishPosition)
     {
         var startPosition = Position;
@@ -46,22 +53,30 @@ public class MysteryCube : MonoBehaviour
         Collider.isTrigger = true;
         for (float t = 0f; t < 1; t += Time.deltaTime * F.Settings.CubeMovingSpeed)
         {
-            transform.localPosition = GetCubicBezierPoint(startPosition, middle1Point, middle2Point, finishPosition, t);
+            transform.localPosition = Utilities.GetCubicBezierPoint(startPosition, middle1Point, middle2Point, finishPosition, t);
             transform.rotation = Quaternion.Euler(rotationAngle * t);
             yield return null;
         }
         Collider.isTrigger = false;
         transform.localPosition = finishPosition;
         transform.rotation = Quaternion.identity;
+        MovingCoroutine = null;
     }
 
     public void ChangeMaterial(bool state)
     {
+        if (IsPortalFrame) { return; }
+
         Mesh.material = state ? DefaultMaterial : FreeMaterial;
     }
 
     public void Shoot(UnitEntity target)
     {
+        if (MovingCoroutine != null)
+        {
+            StopCoroutine(MovingCoroutine);
+            MovingCoroutine = null;
+        }
         StartCoroutine(Shooting(target));
     }
 
@@ -80,33 +95,26 @@ public class MysteryCube : MonoBehaviour
             z = F.Settings.CubeAttackRotation
         };
 
+        target.OnDeath += OnTargetDeath;
+
         Collider.isTrigger = true;
         for (float t = 0f; t < 1; t += Time.deltaTime / F.Settings.CubeAttackTime)
         {
-            transform.position = GetQuadraticBezierPoint(startPosition, middlePoint, target.Position, t);
+            var targetPosition = LastTargetPosition ?? target.Position;
+            transform.position = Utilities.GetQuadraticBezierPoint(startPosition, middlePoint, targetPosition, t);
             transform.rotation = Quaternion.Euler(rotationAngle * t);
             yield return null;
         }
-        target.Kill();
+        if (target.IsAlive)
+        {
+            target.Kill();
+        }
         Destroy(gameObject);
     }
 
-    Vector3 GetQuadraticBezierPoint (Vector3 p0, Vector3 p1, Vector3 p2, float t)
+    void OnTargetDeath(UnitEntity target)
     {
-        var p0p1 = (1 - t) * p0 + t * p1;
-        var p1p2 = (1 - t) * p1 + t * p2;
-        return (1 - t) * p0p1 + t * p1p2;
-    }
-
-    Vector3 GetCubicBezierPoint (Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3, float t)
-    {
-        var p0p1 = (1 - t) * p0 + t * p1;
-        var p1p2 = (1 - t) * p1 + t * p2;
-        var p2p3 = (1 - t) * p2 + t * p3;
-
-        var p0p1_p1p2 = (1 - t) * p0p1 + t * p1p2;
-        var p1p2_p2p3 = (1 - t) * p1p2 + t * p2p3;
-
-        return (1 - t) * p0p1_p1p2 + t * p1p2_p2p3;
+        target.OnDeath -= OnTargetDeath;
+        LastTargetPosition = target.Position;
     }
 }
