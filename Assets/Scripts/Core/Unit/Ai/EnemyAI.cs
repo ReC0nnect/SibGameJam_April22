@@ -31,7 +31,7 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        Unit.SetVelocity((Target.Position - Unit.Position).normalized * F.Settings.EnemyMovingSpeed);
+        Unit.SetVelocity((Target.NormalizedPosition - Unit.Entity.NormalizedPosition).normalized * F.Settings.EnemyMovingSpeed);
         if (Target.Position.x > Unit.transform.position.x)
         {
             Unit_Sprite.flipX = true;

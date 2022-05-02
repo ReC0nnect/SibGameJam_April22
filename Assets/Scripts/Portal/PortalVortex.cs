@@ -27,6 +27,11 @@ public class PortalVortex : MonoBehaviour
         if (direction.sqrMagnitude < AttractRange * AttractRange)
         {
             Session.Player.View.AddVelocity(direction.normalized * F.Settings.PortalVortexAttractForce);
+
+            if (direction.sqrMagnitude < 1f && !Session.Player.IsFalling)
+            {
+                Session.GoNextLevel();
+            }
         }
     }
 }

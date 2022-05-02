@@ -45,11 +45,13 @@ public class PortalEntity
 
     public PortalEntity(SessionEntity session)
     {
+        PortalParent.position = Vector3.down * 0.5f - Vector3.up * (session.LevelNumber * F.Settings.LevelDistance);
+
         Session = session;
         Frames = new List<PortalFrame>(F.Settings.PortalFrameCount);
         EntranceBlocks = new List<Vector3>(F.Settings.PortalEntranceCount);
 
-        var portalPosition = Utilities.GeneratePosition(Session.Player.Position, F.Settings.PortalSpawnRange);
+        var portalPosition = Utilities.GeneratePosition(Session.Player.BlockPosition, F.Settings.PortalSpawnRange);
         Position = portalPosition + new Vector3(0.5f, 0f, 0.5f);
 
         EntranceBlocks.Add(new Vector3(Position.x + 0.5f, 0f, Position.x + 0.5f));
@@ -65,6 +67,20 @@ public class PortalEntity
             frame.Init(this, framePos, idx);
             Frames.Add(frame);
         }
+    }
+
+    public void Destroy()
+    {
+        if (PortalVortex)
+        {
+            GameObject.Destroy(PortalVortex.gameObject);
+        }
+        for (int i = 0; i < Frames.Count; i++)
+        {
+            GameObject.Destroy(Frames[i].gameObject);
+        }
+        Frames.Clear();
+        EntranceBlocks.Clear();
     }
 
     public bool IsPortalFramePosition(Vector3 posision)
@@ -111,7 +127,7 @@ public class PortalEntity
     void ActivatePortal()
     {
         IsActivated = true;
-        PortalVortex = PortalVortex.Create(Session, Position);
+        PortalVortex = PortalVortex.Create(Session, Position + Vector3.down * Session.LevelNumber * F.Settings.LevelDistance);
         Debug.LogWarning("Portal activated");
         //TODO 
     }

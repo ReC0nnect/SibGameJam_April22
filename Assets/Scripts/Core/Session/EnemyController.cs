@@ -44,6 +44,15 @@ public class EnemyController
         enemyEntity.OnDeath += EnemyDeath;
     }
 
+    public void Clear()
+    {
+        for (int i = 0; i < Enemies.Count; i++)
+        {
+            Enemies[i].Kill();
+        }
+        Enemies.Clear();
+    }
+
     void EnemyDeath(UnitEntity enemy)
     {
         enemy.OnDeath -= EnemyDeath;

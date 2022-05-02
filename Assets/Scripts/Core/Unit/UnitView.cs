@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class UnitView : MonoBehaviour
 {
-    UnitEntity Entity;
+    public UnitEntity Entity { get; private set; }
 
 
     Rigidbody RigidbodyCached;

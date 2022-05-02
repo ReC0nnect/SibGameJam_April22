@@ -32,3 +32,7 @@ MonoBehaviour:
   PortalFrameForbiddenDistanceToPortal: 8
   PortalFrameCount: 12
   PortalEntranceCount: 4
+  PortalVortexAttractRange: 3
+  PortalVortexAttractForce: 5
+  FallingTime: 4
+  LevelDistance: 100

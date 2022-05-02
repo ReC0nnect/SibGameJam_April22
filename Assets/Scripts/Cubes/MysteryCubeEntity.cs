@@ -13,7 +13,7 @@ public class MysteryCubeEntity
         Session = session;
     }
 
-    public Vector3 Position => View.Position;
+    public Vector3 Position => View.NormalizedPosition;
     public bool IsPortalFrame => View.IsPortalFrame;
 
     public void CreateView(Transform parent, MysteryCube prefab, Vector3 position)

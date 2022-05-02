@@ -14,7 +14,8 @@ public class MysteryCube : MonoBehaviour
     MysteryCubeEntity Entity;
     Vector3? LastTargetPosition;
 
-    public Vector3 Position => transform.localPosition;
+    public Vector3 NormalizedPosition => transform.localPosition;
+    public Vector3 Position => transform.position;
 
     public void Init(MysteryCubeEntity entity)
     {
@@ -33,8 +34,8 @@ public class MysteryCube : MonoBehaviour
     Coroutine MovingCoroutine;
     IEnumerator BezierMoving(Vector3 finishPosition)
     {
-        var startPosition = Position;
-        var playerBottomPoint = Entity.Session.Player.Position + F.Settings.CubePlayerOffset;
+        var startPosition = NormalizedPosition;
+        var playerBottomPoint = Entity.Session.Player.NormalizedPosition + F.Settings.CubePlayerOffset;
         var middle1Point = playerBottomPoint;
         middle1Point.x += UnityEngine.Random.Range(-F.Settings.CubeMiddlePointRadius, F.Settings.CubeMiddlePointRadius);
         middle1Point.z += UnityEngine.Random.Range(-F.Settings.CubeMiddlePointRadius, F.Settings.CubeMiddlePointRadius);
@@ -82,8 +83,8 @@ public class MysteryCube : MonoBehaviour
 
     IEnumerator Shooting(UnitEntity target)
     {
-        var startPosition = Position; 
-        var middlePoint = Entity.Session.Player.Position + F.Settings.CubePlayerAttackOffset;
+        var startPosition = NormalizedPosition; 
+        var middlePoint = Entity.Session.Player.NormalizedPosition + F.Settings.CubePlayerAttackOffset;
         middlePoint.x += UnityEngine.Random.Range(-F.Settings.CubeMiddlePointRadius, F.Settings.CubeMiddlePointRadius);
         middlePoint.z += UnityEngine.Random.Range(-F.Settings.CubeMiddlePointRadius, F.Settings.CubeMiddlePointRadius);
 
@@ -100,8 +101,8 @@ public class MysteryCube : MonoBehaviour
         Collider.isTrigger = true;
         for (float t = 0f; t < 1; t += Time.deltaTime / F.Settings.CubeAttackTime)
         {
-            var targetPosition = LastTargetPosition ?? target.Position;
-            transform.position = Utilities.GetQuadraticBezierPoint(startPosition, middlePoint, targetPosition, t);
+            var targetPosition = LastTargetPosition ?? target.NormalizedPosition;
+            transform.localPosition = Utilities.GetQuadraticBezierPoint(startPosition, middlePoint, targetPosition, t);
             transform.rotation = Quaternion.Euler(rotationAngle * t);
             yield return null;
         }
@@ -115,6 +116,6 @@ public class MysteryCube : MonoBehaviour
     void OnTargetDeath(UnitEntity target)
     {
         target.OnDeath -= OnTargetDeath;
-        LastTargetPosition = target.Position;
+        LastTargetPosition = target.NormalizedPosition;
     }
 }

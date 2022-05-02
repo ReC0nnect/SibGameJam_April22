@@ -44,18 +44,20 @@ public class CubeController
     {
         Session = session;
 
+        CubesParent.position = Vector3.down * 0.5f - Vector3.up * (session.LevelNumber * F.Settings.LevelDistance);
+
         CreateCubes();
         CreateFreeCubes();
 
         Sockets = new List<Vector3>();
         UpdateSockets();
-
     }
 
     void CreateCubes()
     {
         Cubes = new List<MysteryCubeInfo>();
-        CreateCube(Vector3.zero);
+        var playerPos = Session.Player.BlockPosition;
+        CreateCube(playerPos);
 
         for (float r = 1f; r < F.Settings.CubeRadius; r += 0.5f)
         {
@@ -64,7 +66,7 @@ public class CubeController
                 for (int n = 0; n < TransitionMatrix.Length; n++)
                 {
                     var pos = Cubes[j].Position + TransitionMatrix[n];
-                    if (pos.sqrMagnitude > r * r)
+                    if ((playerPos - pos).sqrMagnitude > r * r)
                     {
                         continue;
                     }
@@ -75,6 +77,21 @@ public class CubeController
                 }
             }
         }
+    }
+
+    public void Clear()
+    {
+        foreach (var freeCube in FreeCubes)
+        {
+            freeCube.Destroy();
+        }
+        FreeCubes.Clear();
+        foreach (var cube in Cubes)
+        {
+            cube.Cube.Destroy();
+        }
+        Cubes.Clear();
+        Sockets.Clear();
     }
 
     void UpdateSockets()
@@ -129,11 +146,12 @@ public class CubeController
         return false;
     }
 
-    void CreateCube(Vector3 pos)
+    MysteryCubeEntity CreateCube(Vector3 pos)
     {
         var cube = new MysteryCubeEntity(Session);
         cube.CreateView(CubesParent, F.Prefabs.Cube, pos);
         Cubes.Add(new MysteryCubeInfo(cube, pos));
+        return cube;
     }
 
     #region FreeCubes
@@ -148,7 +166,7 @@ public class CubeController
 
     void AddFreeCube()
     {
-        var position = Utilities.GeneratePosition(Session.Player.Position, F.Settings.FreeCubeRange);
+        var position = Utilities.GeneratePosition(Session.Player.BlockPosition, F.Settings.FreeCubeRange);
         var cube = new MysteryCubeEntity(Session);
         cube.CreateView(CubesParent, F.Prefabs.FreeCube, position);
         cube.SetCaptured(false);
@@ -158,9 +176,10 @@ public class CubeController
     void UpdateFreeCubes()
     {
         var sqrMaxDistance = F.Settings.FreeCubeMaxDistance * F.Settings.FreeCubeMaxDistance;
+        var playerPosition = Session.Player.NormalizedPosition;
         for (int i = 0; i < FreeCubes.Count; i++)
         {
-            if ((FreeCubes[i].Position - Session.Player.Position).sqrMagnitude > sqrMaxDistance)
+            if ((FreeCubes[i].Position - playerPosition).sqrMagnitude > sqrMaxDistance)
             {
                 if (FreeCubes[i].IsPortalFrame)
                 {
@@ -184,7 +203,7 @@ public class CubeController
         Vector3 position;
         do
         {
-            position = Utilities.GeneratePosition(Session.Player.Position, F.Settings.PortalFrameSpawnRange);
+            position = Utilities.GeneratePosition(Session.Player.BlockPosition, F.Settings.PortalFrameSpawnRange);
 
         } while (!IsEmptyPosition(position));
         var cube = new MysteryCubeEntity(Session);
@@ -201,13 +220,16 @@ public class CubeController
 
     public void Update()
     {
-        MoveCubes();
-        UpdateFreeCubes();
-
-        if (Input.GetKeyDown(KeyCode.Space) && Session.Enemy.HasEnemy)
+        if (!Session.Player.IsFalling)
         {
-            Shoot();
-            
+            MoveCubes();
+            UpdateFreeCubes();
+
+            if (Input.GetKeyDown(KeyCode.Space) && Session.Enemy.HasEnemy)
+            {
+                Shoot();
+
+            }
         }
     }
 
@@ -215,9 +237,10 @@ public class CubeController
     {
         var radiusInBlocks = (Mathf.Sqrt(Cubes.Count)) / 2f + 1f;
         var sqrRadius = radiusInBlocks * radiusInBlocks;
+        var playerNormalizedPosition = Session.Player.NormalizedPosition;
         for (int i = 0; i < Cubes.Count; i++)
         {
-            var sqrMagnitude = (Cubes[i].Position - Session.Player.Position).sqrMagnitude;
+            var sqrMagnitude = (Cubes[i].Position - playerNormalizedPosition).sqrMagnitude;
             if (sqrMagnitude > sqrRadius)
             {
                 MoveCubeByIndex(i, sqrMagnitude);
@@ -227,9 +250,10 @@ public class CubeController
 
     void MoveCubeByIndex(int index, float magnitude)
     {
-        var nearestSocketPos = Sockets.OrderBy(s => (Session.Player.Position - s).sqrMagnitude).First();
+        var playerNormalizedPosition = Session.Player.NormalizedPosition;
+        var nearestSocketPos = Sockets.OrderBy(s => (playerNormalizedPosition - s).sqrMagnitude).First();
 
-        if ((Session.Player.Position - nearestSocketPos).sqrMagnitude < magnitude)
+        if ((playerNormalizedPosition - nearestSocketPos).sqrMagnitude < magnitude)
         {
             Cubes[index].Cube.UpdatePosition(nearestSocketPos);
             Cubes[index].Position = nearestSocketPos;
@@ -238,10 +262,16 @@ public class CubeController
         }
     }
 
+    public void StartFallCube(Vector3 fromPosition, Vector3 toPosition)
+    {
+        var cube = CreateCube(fromPosition);
+        cube.UpdatePosition(toPosition);
+    }
+
     void Shoot()
     {
         var farrestCube = Cubes.Where(c => !c.Cube.IsPortalFrame)
-                               .OrderByDescending(c => (Session.Player.Position - c.Position).sqrMagnitude)
+                               .OrderByDescending(c => (Session.Player.NormalizedPosition - c.Position).sqrMagnitude)
                                .First();
         RemoveFromList(farrestCube);
         farrestCube.Cube.Shoot(Session.Enemy.GetNearestOfPlayer());

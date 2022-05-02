@@ -39,4 +39,8 @@ public class CommonSettings : ScriptableObject
     [Header("Portal Vortex")]
     public float PortalVortexAttractRange = 3f;
     public float PortalVortexAttractForce = 5f;
+
+    [Header("Falling")]
+    public float FallingTime = 7f;
+    public float LevelDistance = 100f;
 }

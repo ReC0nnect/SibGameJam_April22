@@ -16,12 +16,7 @@ public class PortalController
         Session = session;
     }
 
-    public void Update()
-    {
-        TryCreatePortal();
-    }
-
-    void TryCreatePortal()
+    public void CreatePortal()
     {
         if (Portal == null)
         {
@@ -36,7 +31,7 @@ public class PortalController
 
     public bool IsPortalPosition(Vector3 pos)
     {
-        return Portal.IsPortalFramePosition(pos) || Portal.IsEntrancePosition(pos);
+        return Portal != null && (Portal.IsPortalFramePosition(pos) || Portal.IsEntrancePosition(pos));
     }
 
     public bool TryBuildPortal()
@@ -46,5 +41,11 @@ public class PortalController
             return Portal.Build();
         }
         return false;
+    }
+
+    public void Clear()
+    {
+        Portal?.Destroy();
+        Portal = null;
     }
 }
