@@ -1606,7 +1606,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1614,6 +1614,48 @@ TextureImporter:
       bones: []
       spriteID: ef91b08caafb46d4087b504b8626c040
       internalID: -321212988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Portal_Pointer
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 12
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df3bdf6b15fe6041842522140b04dc5
+      internalID: 1758602442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Sword
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 9
+        width: 17
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2eda82eb6e66c142a14eb610a8d167b
+      internalID: 2018578786
       vertices: []
       indices: 
       edges: []
@@ -1663,6 +1705,7 @@ TextureImporter:
       Player_Down_5: -1826789178
       Enemy_Skull_Wing_8: -817347242
       Fire_7: 1170047357
+      Portal_Pointer: 1758602442
       Player_Side_Walk_0: 1321643027
       Player_Down_4: 1613259382
       Player_Idle_1: 258121438
@@ -1677,6 +1720,7 @@ TextureImporter:
       Player_Go_Up_Side_4: 1103480639
       Enemy_Ghost_3: 153762803
       Enemy_Skull_Wing_1: 2118893710
+      Enemy_Sword: 2018578786
       Player_Front_Side_0: 1160177991
       Fire_6: -1850904069
       Fire_2: 848432678

@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85a185d76a73a494c845c93e1af80a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OneStep: 0
 --- !u!95 &6676691593009075
 Animator:
   serializedVersion: 4
@@ -156,7 +157,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: e9d8f8eb5bc2cee4c9babe87ca0625cf, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
