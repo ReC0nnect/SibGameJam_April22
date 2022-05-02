@@ -30,6 +30,10 @@ public class PlayerEntity : UnitEntity
         finishPos.y = -F.Settings.LevelDistance * Session.LevelNumber + 1f;
         var blockStartFalling = false;
         IsFalling = true;
+        if (Session.Follower != null)
+        {
+            Session.Follower.SetPosition(Position);
+        }
 
         for (float t = 0f; t < 1f; t += Time.deltaTime / F.Settings.FallingTime)
         {

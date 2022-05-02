@@ -8,7 +8,7 @@ public class FollowAI : MonoBehaviour
     SpriteRenderer View;
     SessionEntity Session;
 
-    UnitEntity Target;
+    PlayerEntity Target;
 
     public bool Activated { get; private set; }
 
@@ -43,11 +43,21 @@ public class FollowAI : MonoBehaviour
     {
         if (Activated)
         {
-            var direction = Target.NormalizedPosition - Unit.Entity.NormalizedPosition;
+            Vector3 direction;
+            float speed;
+            if (Target.IsFalling)
+            {
+                direction = Target.Position - Unit.Entity.Position;
+                speed = F.Settings.LevelDistance / F.Settings.FallingTime;
+            }
+            else
+            {
+                direction = Target.NormalizedPosition - Unit.Entity.NormalizedPosition;
+                speed = F.Settings.FollowMovingSpeed;
+            }
             if (direction.sqrMagnitude > 2f)
             {
-                Unit.SetVelocity(direction.normalized * F.Settings.FollowMovingSpeed);
-
+                Unit.SetVelocity(direction.normalized * speed);
                 View.flipX = Target.Position.x > Unit.transform.position.x;
             }
         }

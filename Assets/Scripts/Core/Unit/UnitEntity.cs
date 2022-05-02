@@ -53,6 +53,11 @@ public class UnitEntity
         ai.Init(session, cube);
     }
 
+    public void SetPosition(Vector3 position)
+    {
+        View.SetPosition(position);
+    }
+
     public void Kill()
     {
         OnDeath?.Invoke(this);
