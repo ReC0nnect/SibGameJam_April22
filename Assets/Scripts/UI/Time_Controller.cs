@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Time_Controller : MonoBehaviour
 {
     public float slowdownFactor = 0.05f;
     public float slowdownLength = 2f;
+
+    public GameObject DeadMenu;
 
     public bool IsPaused;
     // Start is called before the first frame update
@@ -26,6 +29,21 @@ public class Time_Controller : MonoBehaviour
 
         Time.timeScale += (1f / slowdownLength) * Time.unscaledDeltaTime;
         Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
+    }
+
+    public void ShowDeadMenu()
+    {
+        DeadMenu.SetActive(true);
+    }
+
+    public void HideDeadMenu()
+    {
+        DeadMenu.SetActive(false);
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void UnPause()

@@ -38,7 +38,8 @@ public class UnitInput : MonoBehaviour
         var isRight = false;
 
         if (isDead) 
-        { 
+        {
+            Anim.KillPlayer();
             return; 
         }
 

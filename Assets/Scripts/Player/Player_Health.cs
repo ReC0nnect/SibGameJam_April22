@@ -16,6 +16,7 @@ public class Player_Health : MonoBehaviour
     private Renderer Player_Sprite;
 
     private bool isHitted;
+    private bool isDead;
     private float minColInt = 0.4f, maxColInt = 1f;
     private float colInt;
     private Color c;
@@ -23,6 +24,7 @@ public class Player_Health : MonoBehaviour
     public Rigidbody RB;
 
     private UnitInput Player_Script;
+    public Time_Controller Time_Contr;
 
     private void Start()
     {
@@ -85,15 +87,26 @@ public class Player_Health : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (isHitted)
+        if (isHitted || isDead)
             return;
         
         if(other.gameObject.tag == "Enemy")
         {
             isHitted = true;
             Health -= 1;
-           
-            StartCoroutine(Turn_On_HP(other.gameObject.transform.position));
+            
+            if (Health >= 1)
+            {
+                StartCoroutine(Turn_On_HP(other.gameObject.transform.position));
+            }
+            else
+            {
+                Time_Contr.ShowDeadMenu();
+                c.a = 1;
+                Player_Sprite.material.color = c;
+                isHitted = false;
+            }
+            
 
         }
 

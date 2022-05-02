@@ -32,6 +32,11 @@ public class Animation_Script : MonoBehaviour
         //anim.SetFloat("VerticalVelocity", yVel);
     }
 
+    public void KillPlayer()
+    {
+        anim.SetBool("Dead", true);
+    }
+
     public void Flip(bool state)
     {
         Player_Sprite.flipX = state;
