@@ -11,6 +11,9 @@ public class MysteryCube : MonoBehaviour
     [SerializeField] MeshRenderer Mesh;
     [SerializeField] public bool IsPortalFrame;
 
+    [SerializeField] GameObject OuterCube;
+    [SerializeField] GameObject InnerCubes;
+
     MysteryCubeEntity Entity;
     Vector3? LastTargetPosition;
 
@@ -110,6 +113,10 @@ public class MysteryCube : MonoBehaviour
         {
             target.Kill();
         }
+        OuterCube.SetActive(false);
+        InnerCubes.SetActive(true);
+
+        yield return new WaitForSeconds(3f);
         Destroy(gameObject);
     }
 
