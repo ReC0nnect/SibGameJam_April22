@@ -17,7 +17,9 @@ MonoBehaviour:
   Enemy_3: {fileID: 1013696757366125674, guid: 0ad1d1adf30f4814b86eb5115428a898, type: 3}
   Enemy_4: {fileID: 8013528292185008050, guid: 2fa54653e6ecafb4481e54590b3dd8e7, type: 3}
   Enemy_5: {fileID: 2512600016416802657, guid: e2ebaa1a2e8d15049b97f23667e85f2b, type: 3}
-  Enemy_6: {fileID: 8798801411379139023, guid: 3f005f653ae33d241bd8bb6ed0b213be, type: 3}  Cube: {fileID: -1163273833580696268, guid: f383e0c896643a64aae6fea3d7368732, type: 3}
+  Enemy_6: {fileID: 8798801411379139023, guid: 3f005f653ae33d241bd8bb6ed0b213be, type: 3}
+  Follower: {fileID: 3705194871015703983, guid: 255694a2ac652ad4fbf0d467631419c2, type: 3}
+  Cube: {fileID: -1163273833580696268, guid: f383e0c896643a64aae6fea3d7368732, type: 3}
   FreeCube: {fileID: -1163273833580696268, guid: 87fdd690ecc424e459a5116277732c74, type: 3}
   PortalFrameCube: {fileID: 6147177626294564274, guid: 2372df3ee08b3c443969ae048ae00c6c, type: 3}
   PortalFrame: {fileID: -6534565057186973096, guid: 2372df3ee08b3c443969ae048ae00c6c, type: 3}

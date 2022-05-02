@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerEntity : UnitEntity
 {
     public bool IsFalling { get; private set; }
-    public Vector3 BlockPosition => new Vector3(Mathf.Round(Position.x), 0f, Mathf.Round(Position.z));
 
     public event System.Action OnFallingFinished;
 

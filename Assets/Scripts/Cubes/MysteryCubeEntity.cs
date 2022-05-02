@@ -8,6 +8,8 @@ public class MysteryCubeEntity
     public SessionEntity Session { get; }
     public MysteryCube View { get; private set; }
 
+    public event Action<MysteryCubeEntity> OnCapture;
+
     public MysteryCubeEntity(SessionEntity session)
     {
         Session = session;
@@ -41,5 +43,9 @@ public class MysteryCubeEntity
     public void SetCaptured(bool state)
     {
         View.ChangeMaterial(state);
+        if (state)
+        {
+            OnCapture?.Invoke(this);
+        }
     }
 }

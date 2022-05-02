@@ -8,6 +8,9 @@ public class CommonSettings : ScriptableObject
 {
     [Header("Player")]
     public float PlayerSpeed = 5f;
+    public float FollowMovingSpeed = 10f;
+    public Vector2 FolowerSpawnRange = new Vector2(8f, 14f);
+    public int LevelWithFollower = 1;
     
     [Header("Cube")]
     public Vector3 CubePlayerOffset = new Vector3(0f, -5f, 0f);

@@ -10,6 +10,7 @@ public class SessionEntity
     public int LevelNumber { get; private set; }
 
     public PlayerEntity Player { get; private set; }
+    public UnitEntity Follower { get; private set; }
     public EnemyController Enemy { get; private set; }
     public CubeController Cube { get; private set; }
     public PortalController Portal { get; private set; }
@@ -42,6 +43,17 @@ public class SessionEntity
     {
         Cube = new CubeController(this);
         Portal.CreatePortal();
+
+        if (LevelNumber == F.Settings.LevelWithFollower)
+        {
+            Vector3 position;
+            do
+            {
+                position = Utilities.GeneratePosition(Player.BlockPosition, F.Settings.FolowerSpawnRange);
+
+            } while (!Cube.IsEmptyPosition(position));
+            Follower = new UnitEntity(this, position);
+        }
     }
 
     public void GoNextLevel()

@@ -164,13 +164,17 @@ public class CubeController
         }
     }
 
-    void AddFreeCube()
+    public MysteryCubeEntity AddFreeCube(Vector3? position = null)
     {
-        var position = Utilities.GeneratePosition(Session.Player.BlockPosition, F.Settings.FreeCubeRange);
+        if (!position.HasValue)
+        {
+            position = Utilities.GeneratePosition(Session.Player.BlockPosition, F.Settings.FreeCubeRange);
+        }
         var cube = new MysteryCubeEntity(Session);
-        cube.CreateView(CubesParent, F.Prefabs.FreeCube, position);
+        cube.CreateView(CubesParent, F.Prefabs.FreeCube, position.Value);
         cube.SetCaptured(false);
         FreeCubes.Add(cube);
+        return cube;
     }
 
     void UpdateFreeCubes()
@@ -198,21 +202,23 @@ public class CubeController
     #endregion
     
     #region PortalFrame
-    public void AddPortalFrame()
+    public void AddPortalFrame(Vector3? position = null)
     {
-        Vector3 position;
-        do
+        if (!position.HasValue)
         {
-            position = Utilities.GeneratePosition(Session.Player.BlockPosition, F.Settings.PortalFrameSpawnRange);
+            do
+            {
+                position = Utilities.GeneratePosition(Session.Player.BlockPosition, F.Settings.PortalFrameSpawnRange);
 
-        } while (!IsEmptyPosition(position));
+            } while (!IsEmptyPosition(position.Value));
+        }
         var cube = new MysteryCubeEntity(Session);
-        cube.CreateView(CubesParent, F.Prefabs.PortalFrameCube, position);
+        cube.CreateView(CubesParent, F.Prefabs.PortalFrameCube, position.Value);
         FreeCubes.Add(cube);
     }
     #endregion
 
-    bool IsEmptyPosition(Vector3 position)
+    public bool IsEmptyPosition(Vector3 position)
     {
         return !FreeCubes.Exists(c => c.Position == position)
                && (Session.Portal.Position - position).sqrMagnitude > F.Settings.PortalFrameForbiddenDistanceToPortal * F.Settings.PortalFrameForbiddenDistanceToPortal;

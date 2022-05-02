@@ -9,6 +9,7 @@ public class UnitEntity
     public SessionEntity Session { get; }
     public Vector3 Position => View.Position;
     public Vector3 NormalizedPosition => new Vector3(Position.x, 0f, Position.z);
+    public Vector3 BlockPosition => new Vector3(Mathf.Round(Position.x), 0f, Mathf.Round(Position.z));
 
     public bool IsAlive { get; private set; } = true;
 
@@ -35,6 +36,21 @@ public class UnitEntity
 
         var ai = View.gameObject.AddComponent<EnemyAI>();
         ai.Init(session);
+    }
+
+    public UnitEntity(SessionEntity session, Vector3 position)
+    {
+        Session = session;
+
+        View = GameObject.Instantiate(F.Prefabs.Follower);
+        View.SetPosition(position + Vector3.up * 1.5f + Vector3.down * session.LevelNumber * F.Settings.LevelDistance);
+        View.SetEntity(this);
+
+
+        var cube = session.Cube.AddFreeCube(position);
+
+        var ai = View.gameObject.AddComponent<FollowAI>();
+        ai.Init(session, cube);
     }
 
     public void Kill()

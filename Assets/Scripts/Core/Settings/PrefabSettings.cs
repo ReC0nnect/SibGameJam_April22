@@ -13,6 +13,8 @@ public class PrefabSettings : ScriptableObject
     public UnitView Enemy_5;
     public UnitView Enemy_6;
 
+
+    public UnitView Follower;
     public MysteryCube Cube;
     public MysteryCube FreeCube;
     public MysteryCube PortalFrameCube;
