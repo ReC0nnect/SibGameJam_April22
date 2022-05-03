@@ -77,6 +77,21 @@ public class CubeController
                 }
             }
         }
+        BeautySpawn();
+    }
+
+    void BeautySpawn()
+    {
+        for (int i = 1; i < Cubes.Count; i++)
+        {
+            var position = Session.Player.NormalizedPosition;
+            position.x += UnityEngine.Random.Range(-16f, 16f);
+            position.y = 20f;
+            position.z += UnityEngine.Random.Range(-16f, 16f);
+            Cubes[i].Cube.SetPosition(position);
+            Cubes[i].Cube.LockPositionChanging = true;
+            Cubes[i].Cube.UpdatePosition(Cubes[i].Position, F.Settings.CubeMovingSpeed);
+        }
     }
 
     public void Clear()

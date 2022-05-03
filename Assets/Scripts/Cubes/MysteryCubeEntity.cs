@@ -17,12 +17,18 @@ public class MysteryCubeEntity
 
     public Vector3 Position => View.NormalizedPosition;
     public bool IsPortalFrame => View.IsPortalFrame;
+    public bool LockPositionChanging { get; set; }
 
     public void CreateView(Transform parent, MysteryCube prefab, Vector3 position)
     {
         View = GameObject.Instantiate(prefab, parent);
         View.transform.localPosition = position;
         View.Init(this);
+    }
+
+    public void SetPosition(Vector3 position)
+    {
+        View.SetPosition(position);
     }
 
     public void UpdatePosition(Vector3 position, float speed)

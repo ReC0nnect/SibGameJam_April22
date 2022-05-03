@@ -27,14 +27,22 @@ public class MysteryCube : MonoBehaviour
         Entity = entity;
     }
 
+    public void SetPosition(Vector3 position)
+    {
+        transform.localPosition = position;
+    }
+
     public void SetPosition(Vector3 position, float speed)
     {
+        if (MovingCoroutine != null && Entity.LockPositionChanging)
+        {
+            return;
+        }
         if (MovingCoroutine != null)
         {
             StopCoroutine(MovingCoroutine);
         }
         MovingCoroutine = StartCoroutine(BezierMoving(position, speed));
-        
     }
 
     Coroutine MovingCoroutine;
@@ -42,7 +50,7 @@ public class MysteryCube : MonoBehaviour
     {
         var startPosition = NormalizedPosition;
         var playerPos = Entity.Session.Player.NormalizedPosition;
-        if (Entity.Session.Player.IsFalling)
+        if (Entity.Session.Player.IsFalling && !Entity.LockPositionChanging)
         {
             playerPos.y = -75f;
         }
@@ -71,6 +79,7 @@ public class MysteryCube : MonoBehaviour
         Collider.isTrigger = false;
         transform.localPosition = finishPosition;
         transform.rotation = Quaternion.identity;
+        Entity.LockPositionChanging = false;
         MovingCoroutine = null;
     }
 

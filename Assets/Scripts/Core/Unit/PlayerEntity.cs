@@ -26,13 +26,13 @@ public class PlayerEntity : UnitEntity
     {
 		Anim.StartFalling();
 		if (Session.Portal.IsEndgamePortal)
-		       {
-		           View.StartCoroutine(UpToNextLevel());
-		       }
-		       else
-		       {
-		           View.StartCoroutine(FallingToNextLevel());
-		       }
+		{
+		    View.StartCoroutine(UpToNextLevel());
+		}
+		else
+		{
+		    View.StartCoroutine(FallingToNextLevel());
+		}
     }
 
     IEnumerator FallingToNextLevel()
@@ -61,7 +61,6 @@ public class PlayerEntity : UnitEntity
                 var finishCubePos = finishPos;
                 finishCubePos.y = -100.5f;
                 Session.Cube.StartFallCube(startCubePos, finishCubePos);
-                Debug.Break();
             }
             yield return null;
         }
