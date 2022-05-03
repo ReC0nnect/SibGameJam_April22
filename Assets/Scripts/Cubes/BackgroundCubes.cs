@@ -26,7 +26,10 @@ public class BackgroundCubes : MonoBehaviour
 
     void Update()
     {
-        SpawnCube();
+        if (!Session.Player.IsFalling)
+        {
+            SpawnCube();
+        }
     }
 
     void SpawnAllCubes(Vector3 playerPosition)
@@ -73,10 +76,6 @@ public class BackgroundCubes : MonoBehaviour
             var color = new Color(r, g, b);
 
             meshRenderer.material.color = color;
-            //var block = new MaterialPropertyBlock();
-            //meshRenderer.GetPropertyBlock(block);
-            //block.SetColor("_Color", color);
-            //meshRenderer.SetPropertyBlock(block);
         }
         cube.transform.localScale = scale;
         var rotation = new Vector3()
