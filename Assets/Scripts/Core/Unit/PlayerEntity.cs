@@ -8,26 +8,31 @@ public class PlayerEntity : UnitEntity
 
     public event System.Action OnFallingFinished;
 
+    private Animation_Script Anim;
+
     public PlayerEntity(SessionEntity session) : base(session)
     {
+        
         var playerGo = GameObject.FindGameObjectWithTag("Player");
         if (playerGo)
         {
             View = playerGo.GetComponent<UnitView>();
             View.SetEntity(this);
+            Anim = View.GetComponentInChildren<Animation_Script>();
         }
     }
 
     public void StartFalling()
     {
-        if (Session.Portal.IsEndgamePortal)
-        {
-            View.StartCoroutine(UpToNextLevel());
-        }
-        else
-        {
-            View.StartCoroutine(FallingToNextLevel());
-        }
+		Anim.StartFalling();
+		if (Session.Portal.IsEndgamePortal)
+		       {
+		           View.StartCoroutine(UpToNextLevel());
+		       }
+		       else
+		       {
+		           View.StartCoroutine(FallingToNextLevel());
+		       }
     }
 
     IEnumerator FallingToNextLevel()
@@ -54,9 +59,11 @@ public class PlayerEntity : UnitEntity
             }
             yield return null;
         }
+        Anim.StopFalling();
         Session.Clear();
         OnFallingFinished?.Invoke();
         IsFalling = false;
+        
     }
 
     IEnumerator UpToNextLevel()

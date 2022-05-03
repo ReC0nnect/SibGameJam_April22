@@ -14,6 +14,7 @@ public class MysteryCube : MonoBehaviour
     [SerializeField] GameObject OuterCube;
     [SerializeField] GameObject InnerCubes;
     [SerializeField] string HitSound = "Hit_Sound";
+    [SerializeField] string CubeFlySound = "Cube_Fly";
 
     MysteryCubeEntity Entity;
     Vector3? LastTargetPosition;
@@ -33,6 +34,7 @@ public class MysteryCube : MonoBehaviour
             StopCoroutine(MovingCoroutine);
         }
         MovingCoroutine = StartCoroutine(BezierMoving(position, speed));
+        
     }
 
     Coroutine MovingCoroutine;
@@ -76,6 +78,7 @@ public class MysteryCube : MonoBehaviour
 
     public void Shoot(UnitEntity target)
     {
+        Entity.Session.SFX.Play(CubeFlySound);
         if (MovingCoroutine != null)
         {
             StopCoroutine(MovingCoroutine);
@@ -117,6 +120,7 @@ public class MysteryCube : MonoBehaviour
         InnerCubes.SetActive(true);
 
         Entity.Session.SFX.Play(HitSound);
+        Entity.Session.SFX.Stop(CubeFlySound);
 
         yield return new WaitForSeconds(3f);
         Destroy(gameObject);

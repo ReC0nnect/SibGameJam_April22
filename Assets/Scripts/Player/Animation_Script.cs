@@ -37,6 +37,21 @@ public class Animation_Script : MonoBehaviour
         anim.SetBool("Dead", true);
     }
 
+    public void StartFalling()
+    {
+        anim.SetBool("Fall", true);
+    }
+
+    public void StopFalling()
+    {
+        anim.SetBool("Fall", false);
+    }
+
+    public void WalkSFX()
+    {
+        SessionEntity.Current.SFX.Play("Walking");
+    }
+
     public void Flip(bool state)
     {
         Player_Sprite.flipX = state;

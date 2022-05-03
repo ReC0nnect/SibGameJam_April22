@@ -821,7 +821,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Var1_1
+      name: Follower_Idle
       rect:
         serializedVersion: 2
         x: 232
@@ -837,90 +837,6 @@ TextureImporter:
       bones: []
       spriteID: fd5eb226433467f4587209612ecd8066
       internalID: -824574396
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Var1_2
-      rect:
-        serializedVersion: 2
-        x: 265
-        y: 169
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c03b749237628e04386e8b7e4476876a
-      internalID: 655495140
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Var1_3
-      rect:
-        serializedVersion: 2
-        x: 298
-        y: 169
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b99e908722ac5914a8edf8807b4a7279
-      internalID: 2026419712
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Var1_4
-      rect:
-        serializedVersion: 2
-        x: 331
-        y: 169
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77e2988addd6211458e4a10433ad5d7a
-      internalID: -1451788372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Var1_5
-      rect:
-        serializedVersion: 2
-        x: 364
-        y: 169
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c66f776379ac3c74f9b364c14873f6c5
-      internalID: 1844260788
       vertices: []
       indices: 
       edges: []
@@ -1660,6 +1576,174 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Star_Particle
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 51
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ed0935747971a42ab906face451664
+      internalID: -827208519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_Side_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 120
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f107a1f341dbcf47be148f3744da20d
+      internalID: -979691558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_Side_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 120
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e854fda511f7c8244ad2e0d16f8987a6
+      internalID: -437919707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_Side_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 120
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55699bdbe7f8a134088a721390f51cf8
+      internalID: 1856542222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_Side_3
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 120
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6f0347ae9e1924fbdb1906434c1c98
+      internalID: 454850400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_Side_4
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 120
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b064044c09b7fa548bd9c56a409d87ad
+      internalID: 999044267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_Dead
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 169
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae23873214e05c4ba1c31071cdb41b8
+      internalID: 1662288971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_Crown
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 150
+        width: 5
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd68ff3b342cbd41bd82d1149c1cdbc
+      internalID: -1451565601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1672,82 +1756,90 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Player_Attack: -2073580544
-      Enemy_Var2_0: -1640442567
-      Enemy_Ghost_1: 269285715
-      Player_Go_Up_Side_0: 2096106838
       Enemy_Var2_2: 1558512010
-      Player_Go_Up_4: -2022953267
       Player_Go_Up_Side_3: 2002746559
-      Player_Go_Up_0: 2045138165
-      Enemy_ZombieV2: -1362990250
+      Player_Go_Up_Side_0: 2096106838
+      Player_Go_Up_4: -2022953267
+      Follower_Side_1: -437919707
       Enemy_Ghost_4: 740479044
-      Enemy_Var1_3: 2026419712
       Player_Go_Up_3: 714098152
       Enemy_Skull_Wing_2: -812041142
       Enemy_Ghost_2: -761815560
       Enemy_Skull_Wing_0: -1789779197
-      Enemy_Var1_4: -1451788372
-      Enemy_Var3_2: 792997346
       Enemy_Skull_Wing_5: 997568056
       Fire_5: 1260361041
-      Player_Front_Side_2: 786995083
       Enemy_Var1_2: 655495140
-      Player_Dead: -321212988
       Enemy_Var2_5: 468422079
-      Player_Side_Walk_4: -969237351
-      Player_Idle_2: 820584783
+      Enemy_Skull_Wing_8: -817347242
       Enemy_Var2_3: -1231768817
       Player_Front_Side_1: -156910292
-      Fire_0: 969012478
-      Enemy_Ghost_0: 1815464805
-      Enemy_Ghost_5: -508337297
-      Player_Hand: -1094340535
       Player_Down_5: -1826789178
-      Enemy_Skull_Wing_8: -817347242
-      Fire_7: 1170047357
+      Player_Hand: -1094340535
       Portal_Pointer: 1758602442
       Player_Side_Walk_0: 1321643027
       Player_Down_4: 1613259382
+      Follower_Side_3: 454850400
+      Fire_1: -573589342
+      Player_Down_1: -178014329
+      Player_Front_Side_0: 1160177991
+      Fire_6: -1850904069
+      Enemy_Var3_1: -953555060
+      Player_Go_Up_2: -2000776717
+      Fire_4: 1107835499
+      Player_Front_Side_4: 1056246020
+      Player_Down_3: 1813245295
+      Enemy_Var2_4: -19056293
+      Player_Side_Walk_5: 322161017
+      Player_Go_Up_1: 2028350958
+      Player_Front_Side_3: 1354664474
+      Player_Down_0: 692210839
+      Follower_Idle: -824574396
+      Enemy_Var2_0: -1640442567
+      Enemy_Ghost_1: 269285715
+      Enemy_ZombieV2: -1362990250
+      Player_Go_Up_0: 2045138165
+      Enemy_Var1_3: 2026419712
+      Enemy_Var1_4: -1451788372
+      Enemy_Var3_2: 792997346
+      Player_Front_Side_2: 786995083
+      Follower_Side_0: -979691558
+      Player_Dead: -321212988
+      Player_Side_Walk_4: -969237351
+      Player_Idle_2: 820584783
+      Fire_0: 969012478
+      Follower_Crown: -1451565601
+      Enemy_Ghost_0: 1815464805
+      Enemy_Ghost_5: -508337297
+      Fire_7: 1170047357
       Player_Idle_1: 258121438
       Player_Idle_0: -2087377303
       Player_Down_2: -587460451
       Enemy_ZombieV1: 1542112584
       Enemy_Var2_1: 295523732
       Enemy_ZombieV3: 587713520
-      Fire_1: -573589342
+      Follower_Side_2: 1856542222
       Enemy_Var3_3: -957174765
-      Player_Down_1: -178014329
       Player_Go_Up_Side_4: 1103480639
       Enemy_Ghost_3: 153762803
+      Star_Particle: -827208519
       Enemy_Skull_Wing_1: 2118893710
       Enemy_Sword: 2018578786
-      Player_Front_Side_0: 1160177991
-      Fire_6: -1850904069
       Fire_2: 848432678
       Enemy_Var3_5: 72476887
       Enemy_Skull: -289714113
       Enemy_Var1_5: 1844260788
       Enemy_Skull_Wing_6: 607432001
+      Follower_Side_4: 999044267
       Enemy_Skull_Wing_7: 1642065784
       Player_Side_Walk_2: -286730402
       Fire_3: 742913028
-      Enemy_Var3_1: -953555060
       Enemy_Skull_Wing_4: -1780469828
-      Player_Go_Up_2: -2000776717
       Player_Go_Up_Side_1: -1371233849
-      Player_Front_Side_4: 1056246020
-      Enemy_Var1_1: -824574396
-      Fire_4: 1107835499
       Enemy_Var3_4: 505763300
+      Follower_Dead: 1662288971
       Player_Side_Walk_3: -2139446931
       Player_Side_Walk_1: -676747913
-      Enemy_Var2_4: -19056293
-      Player_Side_Walk_5: 322161017
-      Player_Down_3: 1813245295
-      Player_Go_Up_1: 2028350958
       Enemy_Skull_Wing_3: 725166258
-      Player_Front_Side_3: 1354664474
-      Player_Down_0: 692210839
       Player_Go_Up_Side_2: -708067855
   spritePackingTag: 
   pSDRemoveMatte: 0

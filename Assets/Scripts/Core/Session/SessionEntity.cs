@@ -66,6 +66,7 @@ public class SessionEntity
     {
         LevelNumber++;
         Player.StartFalling();
+        
     }
 
     public void Clear()

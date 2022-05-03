@@ -94,6 +94,7 @@ public class Player_Health : MonoBehaviour
         
         if(other.gameObject.tag == "Enemy")
         {
+            SessionEntity.Current.SFX.Play("Player_Hurt");
             isHitted = true;
             Health -= 1;
             
