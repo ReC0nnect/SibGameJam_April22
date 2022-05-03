@@ -433,7 +433,16 @@ MonoBehaviour:
     loop: 0
     MixerGroup: {fileID: 24300002, guid: 81e796922fc512341ad7d3603b3516d9, type: 2}
     source: {fileID: 0}
-  musics: []
+  musics:
+  - name: Level_1
+    clip: {fileID: 8300000, guid: 13190868c0e9b4f46bc4ce4f5ac8cf84, type: 3}
+    volume: 0.395
+    volumeVariance: 0.117
+    pitch: 0.71
+    pitchVariance: 0
+    loop: 1
+    MixerGroup: {fileID: 24300002, guid: f326e0467e37139449348bb8bf8ba20f, type: 2}
+    source: {fileID: 0}
 --- !u!4 &470126657
 Transform:
   m_ObjectHideFlags: 0
@@ -1860,6 +1869,7 @@ MonoBehaviour:
   slowdownLength: 2
   DeadMenu: {fileID: 1547233906}
   IsPaused: 0
+  SFX: {fileID: 470126656}
 --- !u!114 &1106279697
 MonoBehaviour:
   m_ObjectHideFlags: 0

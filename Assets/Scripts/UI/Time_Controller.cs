@@ -12,9 +12,12 @@ public class Time_Controller : MonoBehaviour
 
     public bool IsPaused;
     // Start is called before the first frame update
-    
-    
-    
+    public Audio_Manager SFX;
+
+    private void Awake()
+    {
+        SFX.PlayMusic("Level_1");
+    }
     public void DoPause()
     {
         Time.timeScale = 0;
