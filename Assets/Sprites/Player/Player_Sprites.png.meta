@@ -1606,7 +1606,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1627,7 +1627,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1648,7 +1648,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1669,7 +1669,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1690,7 +1690,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1711,7 +1711,7 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1732,7 +1732,7 @@ TextureImporter:
         width: 5
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1740,6 +1740,90 @@ TextureImporter:
       bones: []
       spriteID: 9fd68ff3b342cbd41bd82d1149c1cdbc
       internalID: -1451565601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Magician
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 71
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3dcb25ca07089419b0d7b167e453ab
+      internalID: 878260871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Magician_Stuff
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 71
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f32692c67b63d448a7ef19c2a01c28c
+      internalID: -421452810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Swordsman
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 71
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d6f14cd982b3948ba2988a5fdded68
+      internalID: -1296819883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Swordsman_Sword
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 71
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0b6c330d12f624fae608e902a65d6d
+      internalID: -1663998078
       vertices: []
       indices: 
       edges: []
@@ -1756,6 +1840,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Player_Attack: -2073580544
+      Enemy_Magician_Stuff: -421452810
       Enemy_Var2_2: 1558512010
       Player_Go_Up_Side_3: 2002746559
       Player_Go_Up_Side_0: 2096106838
@@ -1788,15 +1873,17 @@ TextureImporter:
       Fire_4: 1107835499
       Player_Front_Side_4: 1056246020
       Player_Down_3: 1813245295
-      Enemy_Var2_4: -19056293
       Player_Side_Walk_5: 322161017
+      Enemy_Var2_4: -19056293
       Player_Go_Up_1: 2028350958
       Player_Front_Side_3: 1354664474
       Player_Down_0: 692210839
+      Enemy_Swordsman: -1296819883
       Follower_Idle: -824574396
+      Enemy_Magician: 878260871
       Enemy_Var2_0: -1640442567
-      Enemy_Ghost_1: 269285715
       Enemy_ZombieV2: -1362990250
+      Enemy_Ghost_1: 269285715
       Player_Go_Up_0: 2045138165
       Enemy_Var1_3: 2026419712
       Enemy_Var1_4: -1451788372
@@ -1840,6 +1927,7 @@ TextureImporter:
       Player_Side_Walk_3: -2139446931
       Player_Side_Walk_1: -676747913
       Enemy_Skull_Wing_3: 725166258
+      Enemy_Swordsman_Sword: -1663998078
       Player_Go_Up_Side_2: -708067855
   spritePackingTag: 
   pSDRemoveMatte: 0

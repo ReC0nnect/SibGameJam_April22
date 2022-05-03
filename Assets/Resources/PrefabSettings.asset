@@ -18,6 +18,9 @@ MonoBehaviour:
   Enemy_4: {fileID: 8013528292185008050, guid: 2fa54653e6ecafb4481e54590b3dd8e7, type: 3}
   Enemy_5: {fileID: 2512600016416802657, guid: e2ebaa1a2e8d15049b97f23667e85f2b, type: 3}
   Enemy_6: {fileID: 8798801411379139023, guid: 3f005f653ae33d241bd8bb6ed0b213be, type: 3}
+  Enemy_7: {fileID: 8798801411379139023, guid: 1871d95912c48524780a0d15c284a8a4, type: 3}
+  Enemy_8: {fileID: 8798801411379139023, guid: eadd982d76ac2cb43943f3b73e8be94b, type: 3}
+  Fireball: {fileID: 3120648094093756014, guid: f6fee9b8c53281c4aa8fd2370939168b, type: 3}
   Follower: {fileID: 3705194871015703983, guid: 255694a2ac652ad4fbf0d467631419c2, type: 3}
   Cube: {fileID: -1163273833580696268, guid: f383e0c896643a64aae6fea3d7368732, type: 3}
   FreeCube: {fileID: -1163273833580696268, guid: 87fdd690ecc424e459a5116277732c74, type: 3}
