@@ -26,6 +26,8 @@ public class Player_Health : MonoBehaviour
     private UnitInput Player_Script;
     public Time_Controller Time_Contr;
 
+    public event System.Action OnDeath;
+
     private void Start()
     {
         Player_Sprite = gameObject.GetComponentInChildren<SpriteRenderer>();
@@ -81,7 +83,7 @@ public class Player_Health : MonoBehaviour
         }
         if (Health < 1)
         {
-            Player_Script.isDead = true;
+            OnDeath?.Invoke();
         }
     }
 

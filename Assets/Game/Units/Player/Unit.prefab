@@ -249,6 +249,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17200184302dafd4285296e02bc08c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Anim: {fileID: 3999469319674721172}
+  Health: {fileID: 6413011171769908777}
+  View: {fileID: 0}
+  ControlFlip: 0
 --- !u!114 &6413011171769908777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,6 +270,8 @@ MonoBehaviour:
   Lifes: []
   Full_Life: {fileID: -565595129, guid: 72e3c13853ee57249ab2f55084234d3c, type: 3}
   Empty_Life: {fileID: 522386293, guid: 72e3c13853ee57249ab2f55084234d3c, type: 3}
+  RB: {fileID: 0}
+  Time_Contr: {fileID: 0}
 --- !u!65 &4132021871621770753
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -439,6 +445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85a185d76a73a494c845c93e1af80a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OneStep: 0
 --- !u!95 &909244084439625203
 Animator:
   serializedVersion: 4

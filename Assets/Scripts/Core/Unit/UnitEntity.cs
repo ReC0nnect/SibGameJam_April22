@@ -11,7 +11,7 @@ public class UnitEntity
     public Vector3 NormalizedPosition => new Vector3(Position.x, 0f, Position.z);
     public Vector3 BlockPosition => new Vector3(Mathf.Round(Position.x), 0f, Mathf.Round(Position.z));
 
-    public bool IsAlive { get; private set; } = true;
+    public bool IsAlive { get; set; } = true;
 
     public event Action<UnitEntity> OnDeath;
 

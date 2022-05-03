@@ -27,6 +27,10 @@ public class UI_Controller : MonoBehaviour
 
     public void ShowWinPanel(float time)
     {
+        if (TryGetComponent(out Time_Controller timeCtrl))
+        {
+            timeCtrl.DoPause();
+        }
         WinPanel.SetActive(true);
         WinButton.onClick.RemoveAllListeners();
         WinButton.onClick.AddListener(GoToMainMenu);

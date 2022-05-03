@@ -12,7 +12,6 @@ public class UnitInput : MonoBehaviour
 
  
     private bool isPaused = false;
-    public bool isDead = false;
 
 
     UnitView UnitViewCached;
@@ -25,7 +24,7 @@ public class UnitInput : MonoBehaviour
             return UnitViewCached;
         }
     }
-   
+
     void Update()
     {
         Other_Buttons();
@@ -37,10 +36,9 @@ public class UnitInput : MonoBehaviour
         var direction = Vector3.zero;
         var isRight = false;
 
-        if (isDead) 
+        if (!UnitView.Entity.IsAlive)
         {
-            Anim.KillPlayer();
-            return; 
+            return;
         }
 
         if (Input.GetKey(KeyCode.D))

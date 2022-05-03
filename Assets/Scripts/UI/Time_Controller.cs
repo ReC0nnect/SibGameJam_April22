@@ -31,6 +31,11 @@ public class Time_Controller : MonoBehaviour
         Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
     }
 
+    void OnDestroy()
+    {
+        Time.timeScale = 1;
+    }
+
     public void ShowDeadMenu()
     {
         DeadMenu.SetActive(true);

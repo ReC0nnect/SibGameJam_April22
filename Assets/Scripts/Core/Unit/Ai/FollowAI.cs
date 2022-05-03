@@ -57,8 +57,15 @@ public class FollowAI : MonoBehaviour
             }
             if (direction.sqrMagnitude > 2f)
             {
-                Unit.SetVelocity(direction.normalized * speed);
-                View.flipX = Target.Position.x > Unit.transform.position.x;
+                var velocity = direction.normalized * speed;
+                Unit.SetVelocity(velocity);
+                //View.flipX = Target.Position.x > Unit.transform.position.x;
+
+                View.flipX = (velocity.x > 0f && velocity.z > 0f
+                || velocity.normalized.x > -0.5f && velocity.z > 0f
+                || velocity.x > 0f && velocity.normalized.z > -0.5f);
+
+                Unit.AnimScript.SetHorizontalMovement(direction.x, direction.z);
             }
         }
     }

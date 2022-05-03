@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class UnitView : MonoBehaviour
 {
+    [SerializeField] Animation_Script Anim;
+    [SerializeField] Player_Health Health;
     [SerializeField] SpriteRenderer View;
     [SerializeField] bool ControlFlip;
     public UnitEntity Entity { get; private set; }
@@ -21,11 +23,26 @@ public class UnitView : MonoBehaviour
         }
     }
 
+    public Animation_Script AnimScript => Anim;
     public Vector3 Position => transform.position;
 
     public void SetEntity(UnitEntity entity)
     {
         Entity = entity;
+        if (Health)
+        {
+            Health.OnDeath += OnDeath;
+        }
+    }
+
+    void OnDeath()
+    {
+        Health.OnDeath -= OnDeath;
+        Entity.IsAlive = false;
+        if (Anim)
+        {
+            Anim.KillPlayer();
+        }
     }
 
     public void SetPosition(Vector3 position)
