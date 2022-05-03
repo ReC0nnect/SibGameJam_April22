@@ -433,6 +433,51 @@ MonoBehaviour:
     loop: 0
     MixerGroup: {fileID: 24300002, guid: 81e796922fc512341ad7d3603b3516d9, type: 2}
     source: {fileID: 0}
+  - name: PortalFramePlaced
+    clip: {fileID: 8300000, guid: 64bfdfebf4d0f8645bbeefd6028e6349, type: 3}
+    volume: 0.6
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.3
+    loop: 0
+    MixerGroup: {fileID: 24300002, guid: 81e796922fc512341ad7d3603b3516d9, type: 2}
+    source: {fileID: 0}
+  - name: FollowerFound
+    clip: {fileID: 8300000, guid: cb90b6f9429815e40b8f03968c992837, type: 3}
+    volume: 0.6
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.3
+    loop: 0
+    MixerGroup: {fileID: 24300002, guid: 81e796922fc512341ad7d3603b3516d9, type: 2}
+    source: {fileID: 0}
+  - name: CaptureCube
+    clip: {fileID: 8300000, guid: b17f3d606d722e54394a903d022e7670, type: 3}
+    volume: 0.6
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.3
+    loop: 0
+    MixerGroup: {fileID: 24300002, guid: 81e796922fc512341ad7d3603b3516d9, type: 2}
+    source: {fileID: 0}
+  - name: CaptureFrame
+    clip: {fileID: 8300000, guid: b17f3d606d722e54394a903d022e7670, type: 3}
+    volume: 0.6
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.3
+    loop: 0
+    MixerGroup: {fileID: 24300002, guid: 81e796922fc512341ad7d3603b3516d9, type: 2}
+    source: {fileID: 0}
+  - name: PortalActivated
+    clip: {fileID: 8300000, guid: 9ce2e7ea8d2a6644eb781eede1cf2d8a, type: 3}
+    volume: 0.6
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.3
+    loop: 0
+    MixerGroup: {fileID: 24300002, guid: 81e796922fc512341ad7d3603b3516d9, type: 2}
+    source: {fileID: 0}
   musics:
   - name: Level_1
     clip: {fileID: 8300000, guid: 13190868c0e9b4f46bc4ce4f5ac8cf84, type: 3}

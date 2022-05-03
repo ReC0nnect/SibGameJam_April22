@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PortalFrame : MonoBehaviour
 {
+    [SerializeField] string SoundFramePlaced;
+
     PortalEntity Entity;
 
     public Vector3 Position => transform.localPosition;
@@ -20,5 +22,10 @@ public class PortalFrame : MonoBehaviour
     public void SetIndex(int index)
     {
         Index = index;
+    }
+
+    public void Place()
+    {
+        SessionEntity.Current.SFX.Play(SoundFramePlaced);
     }
 }

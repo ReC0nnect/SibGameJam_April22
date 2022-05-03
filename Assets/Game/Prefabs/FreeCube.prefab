@@ -3467,6 +3467,8 @@ MonoBehaviour:
   OuterCube: {fileID: 1668708162916935379}
   InnerCubes: {fileID: 414995052075902448}
   HitSound: Cube_Explode
+  CubeFlySound: Cube_Fly
+  CaptureSound: CaptureCube
 --- !u!1 &8791655495678520898
 GameObject:
   m_ObjectHideFlags: 0

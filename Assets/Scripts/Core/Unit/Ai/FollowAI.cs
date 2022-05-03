@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class FollowAI : MonoBehaviour
 {
+    [SerializeField] string SoundFollowerFound = "FollowerFound";
+
     SpriteRenderer View;
     SessionEntity Session;
 
@@ -37,6 +39,7 @@ public class FollowAI : MonoBehaviour
     {
         cube.OnCapture -= Activate;
         Activated = true;
+        Session.SFX.Play(SoundFollowerFound);
     }
 
     void Update()

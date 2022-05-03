@@ -51,6 +51,7 @@ public class MysteryCubeEntity
         View.ChangeMaterial(state);
         if (state)
         {
+            View.Capture();
             OnCapture?.Invoke(this);
         }
     }

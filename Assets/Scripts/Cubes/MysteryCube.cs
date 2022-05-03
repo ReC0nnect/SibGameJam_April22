@@ -15,6 +15,7 @@ public class MysteryCube : MonoBehaviour
     [SerializeField] GameObject InnerCubes;
     [SerializeField] string HitSound = "Hit_Sound";
     [SerializeField] string CubeFlySound = "Cube_Fly";
+    [SerializeField] string CaptureSound = "CaptureBlock";
 
     MysteryCubeEntity Entity;
     Vector3? LastTargetPosition;
@@ -144,5 +145,12 @@ public class MysteryCube : MonoBehaviour
     {
         target.OnDeath -= OnTargetDeath;
         LastTargetPosition = target.NormalizedPosition;
+    }
+    public void Capture()
+    {
+        if (Entity != null && Entity.Session != null)
+        {
+            Entity.Session.SFX.Play(CaptureSound);
+        }
     }
 }

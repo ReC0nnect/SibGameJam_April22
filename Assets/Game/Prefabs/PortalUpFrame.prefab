@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e721820d134a1f54485817ef21fab549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SoundFramePlaced: PortalFramePlaced
 --- !u!114 &6147177626294564274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +198,7 @@ MonoBehaviour:
   InnerCubes: {fileID: 0}
   HitSound: Hit_Sound
   CubeFlySound: Cube_Fly
+  CaptureSound: CaptureFrame
 --- !u!1001 &2011166102980680578
 PrefabInstance:
   m_ObjectHideFlags: 0

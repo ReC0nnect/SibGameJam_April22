@@ -36,12 +36,12 @@ public class SessionEntity
 
     void Init()
     {
+        SFX = GameObject.FindObjectOfType<Audio_Manager>();
+        BackgroundCubes = GameObject.FindObjectOfType<BackgroundCubes>();
         Player = new PlayerEntity(this);
         Enemy = new EnemyController(this);
         Cube = new CubeController(this);
         Portal = new PortalController(this);
-        SFX = GameObject.FindObjectOfType<Audio_Manager>();
-        BackgroundCubes = GameObject.FindObjectOfType<BackgroundCubes>();
         BackgroundCubes.Init(this);
         Portal.CreatePortal();
 

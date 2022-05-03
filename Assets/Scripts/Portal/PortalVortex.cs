@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PortalVortex : MonoBehaviour
 {
+    [SerializeField] string ShowSound = "PortalActivated";
     SessionEntity Session;
     float AttractRange;
 
@@ -11,6 +12,7 @@ public class PortalVortex : MonoBehaviour
     {
         Session = session;
         AttractRange = F.Settings.PortalVortexAttractRange;
+        Session.SFX.Play(ShowSound);
     }
 
     void FixedUpdate()

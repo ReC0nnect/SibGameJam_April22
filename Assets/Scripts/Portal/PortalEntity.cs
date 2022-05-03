@@ -102,6 +102,7 @@ public abstract class PortalEntity
             {
                 portalFrame.transform.parent = PortalParent;
                 frames[0].UpdatePosition(Position + FramePositions[i], F.Settings.CubeMovingSpeed);
+                portalFrame.Place();
                 portalFrame.SetIndex(i);
                 Frames.Add(portalFrame);
                 Session.Cube.RemoveFromList(frames[0]);
