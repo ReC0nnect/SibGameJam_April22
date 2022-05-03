@@ -27,12 +27,13 @@ public class MainMenu : MonoBehaviour
 
     void Exit()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-//#elif UNITY_WEBPLAYER
-//        Application.OpenURL(WebplayerQuitURL);
-#else
         Application.Quit();
-#endif
+//#if UNITY_EDITOR
+//        UnityEditor.EditorApplication.isPlaying = false;
+////#elif UNITY_WEBPLAYER
+////        Application.OpenURL(WebplayerQuitURL);
+//#else
+//        Application.Quit();
+//#endif
     }
 }

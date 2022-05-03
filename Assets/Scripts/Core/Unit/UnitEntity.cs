@@ -30,8 +30,8 @@ public class UnitEntity
         else if (Random_Num == 3) { View = GameObject.Instantiate(F.Prefabs.Enemy_4); }
         else if (Random_Num == 4) { View = GameObject.Instantiate(F.Prefabs.Enemy_5); }
         else if (Random_Num == 5) { View = GameObject.Instantiate(F.Prefabs.Enemy_6); }
-        else if (Random_Num == 6) { View = GameObject.Instantiate(F.Prefabs.Enemy_7); }
-        else if (Random_Num == 7) { View = GameObject.Instantiate(F.Prefabs.Enemy_8); }
+        //else if (Random_Num == 6) { View = GameObject.Instantiate(F.Prefabs.Enemy_7); }
+        //else if (Random_Num == 7) { View = GameObject.Instantiate(F.Prefabs.Enemy_8); }
 
         View.SetPosition(position);
         View.SetEntity(this);
