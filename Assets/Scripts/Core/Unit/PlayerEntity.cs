@@ -56,7 +56,12 @@ public class PlayerEntity : UnitEntity
                 blockStartFalling = true;
                 Session.Clear();
                 Session.BackgroundCubes.Respawn(finishPos);
-                Session.Cube.StartFallCube(startPos + (finishPos - startPos) / 3f, finishPos);
+                var startCubePos = startPos;
+                startCubePos.y = -30f;
+                var finishCubePos = finishPos;
+                finishCubePos.y = -100.5f;
+                Session.Cube.StartFallCube(startCubePos, finishCubePos);
+                Debug.Break();
             }
             yield return null;
         }

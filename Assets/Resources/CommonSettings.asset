@@ -22,7 +22,7 @@ MonoBehaviour:
   CubeMiddlePointRadius: 5
   CubeRadius: 3
   CubeMovingSpeed: 4
-  CubeFallingSpeed: 0.7
+  CubeFallingSpeed: 0.6
   CubeAttackTime: 1
   BackgroundCubeDepth: {x: 4, y: 12}
   BackgroundCubeDistance: {x: 32, y: 52}

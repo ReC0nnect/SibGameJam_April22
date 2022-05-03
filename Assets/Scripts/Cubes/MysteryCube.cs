@@ -41,7 +41,12 @@ public class MysteryCube : MonoBehaviour
     IEnumerator BezierMoving(Vector3 finishPosition, float speed)
     {
         var startPosition = NormalizedPosition;
-        var playerBottomPoint = Entity.Session.Player.NormalizedPosition + F.Settings.CubePlayerOffset;
+        var playerPos = Entity.Session.Player.NormalizedPosition;
+        if (Entity.Session.Player.IsFalling)
+        {
+            playerPos.y = -75f;
+        }
+        var playerBottomPoint = playerPos + F.Settings.CubePlayerOffset;
         var middle1Point = playerBottomPoint;
         middle1Point.x += UnityEngine.Random.Range(-F.Settings.CubeMiddlePointRadius, F.Settings.CubeMiddlePointRadius);
         middle1Point.z += UnityEngine.Random.Range(-F.Settings.CubeMiddlePointRadius, F.Settings.CubeMiddlePointRadius);
