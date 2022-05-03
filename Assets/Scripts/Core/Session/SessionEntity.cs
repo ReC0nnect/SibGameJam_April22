@@ -17,6 +17,8 @@ public class SessionEntity
 
     public Audio_Manager SFX { get; private set; }
 
+    public float PlayTime { get; private set; }
+
     public static SessionEntity Create()
     {
         Current = new SessionEntity();
@@ -28,6 +30,7 @@ public class SessionEntity
     {
         Cube.Update();
         Enemy.Update();
+        PlayTime += Time.deltaTime;
     }
 
     void Init()
@@ -74,6 +77,6 @@ public class SessionEntity
 
     public void Win()
     {
-        
+        UI_Controller.Instance.ShowWinPanel(PlayTime);
     }
 }
