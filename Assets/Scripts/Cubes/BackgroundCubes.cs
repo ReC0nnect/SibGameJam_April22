@@ -64,6 +64,20 @@ public class BackgroundCubes : MonoBehaviour
         {
             scale /= 2f;
         }
+        var meshRenderer = cube.GetComponentInChildren<MeshRenderer>();
+        if (meshRenderer)
+        {
+            var r = UnityEngine.Random.value;
+            var g = UnityEngine.Random.value;
+            var b = UnityEngine.Random.value;
+            var color = new Color(r, g, b);
+
+            meshRenderer.material.color = color;
+            //var block = new MaterialPropertyBlock();
+            //meshRenderer.GetPropertyBlock(block);
+            //block.SetColor("_Color", color);
+            //meshRenderer.SetPropertyBlock(block);
+        }
         cube.transform.localScale = scale;
         var rotation = new Vector3()
         {
