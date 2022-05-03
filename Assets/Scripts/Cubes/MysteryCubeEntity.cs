@@ -25,9 +25,9 @@ public class MysteryCubeEntity
         View.Init(this);
     }
 
-    public void UpdatePosition(Vector3 position)
+    public void UpdatePosition(Vector3 position, float speed)
     {
-        View.SetPosition(position);
+        View.SetPosition(position, speed);
     }
 
     public void Destroy()

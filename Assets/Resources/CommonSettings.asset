@@ -22,6 +22,7 @@ MonoBehaviour:
   CubeMiddlePointRadius: 5
   CubeRadius: 3
   CubeMovingSpeed: 4
+  CubeFallingSpeed: 0.7
   CubeAttackTime: 1
   FreeCubeRange: {x: 32, y: 48}
   FreeCubeCount: 16
@@ -31,11 +32,15 @@ MonoBehaviour:
   EnemyMovingSpeed: 3
   PortalSpawnRange: {x: 32, y: 64}
   PortalFrameSpawnRange: {x: 24, y: 48}
-  PortalFrameStartCount: {x: 3, y: 8}
+  PortalFrameStartCount: {x: 3, y: 6}
   PortalFrameForbiddenDistanceToPortal: 8
+  PortalFrameSpawnExtraCount: 8
   PortalFrameCount: 12
   PortalEntranceCount: 4
+  PortalUpFrameCount: 14
+  PortalUpEntranceCount: 6
   PortalVortexAttractRange: 3
   PortalVortexAttractForce: 5
   FallingTime: 4
+  FlightUpTime: 10
   LevelDistance: 100

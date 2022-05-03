@@ -17,8 +17,9 @@ public class PrefabSettings : ScriptableObject
     public UnitView Follower;
     public MysteryCube Cube;
     public MysteryCube FreeCube;
-    public MysteryCube PortalFrameCube;
-    public PortalFrame PortalFrame;
-    public PortalVortex PortalVortex;
+    public PortalFrame PortalDownFrame;
+    public PortalFrame PortalUpFrame;
+    public PortalVortex PortalDownVortex;
+    public PortalVortex PortalUpVortex;
     public PortalTip PortalTip;
 }

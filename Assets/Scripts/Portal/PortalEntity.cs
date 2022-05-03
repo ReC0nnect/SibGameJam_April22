@@ -1,36 +1,31 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PortalEntity
+public abstract class PortalEntity
 {
-    readonly Vector3[] FramePositions = new Vector3[]{
-        new Vector3(-1.5f, 0f, -1.5f),
-        new Vector3(-0.5f, 0f, -1.5f),
-        new Vector3( 0.5f, 0f, -1.5f),
-        new Vector3( 1.5f, 0f, -1.5f),
-        new Vector3(-1.5f, 0f, -0.5f),
-        new Vector3( 1.5f, 0f, -0.5f),
-        new Vector3(-1.5f, 0f,  0.5f),
-        new Vector3( 1.5f, 0f,  0.5f),
-        new Vector3(-1.5f, 0f,  1.5f),
-        new Vector3(-0.5f, 0f,  1.5f),
-        new Vector3( 0.5f, 0f,  1.5f),
-        new Vector3( 1.5f, 0f,  1.5f) 
-    };
+    protected PortalVortex PortalVortex;
+    protected abstract Vector3[] FramePositions { get; }
+    protected abstract Vector3[] EntrancePositions { get; }
 
-    PortalVortex PortalVortex;
-    List<PortalFrame> Frames { get; }
-    List<Vector3> EntranceBlocks { get; }
-    public SessionEntity Session { get; }
     public Vector3 Position { get; }
     public Vector3 NormalizedPosition => Position + Vector3.down * Session.LevelNumber * F.Settings.LevelDistance;
-    public int PortalFrameLeft => F.Settings.PortalFrameCount - Frames.Count;
-    public bool IsActivated { get; private set; }
+    public int PortalFrameCount => FramePositions.Length;
+    public int PortalFrameLeft => PortalFrameCount - Frames.Count;
+    public int PortalEntranceCount => EntrancePositions.Length;
+    public int PortalFrameSpawnCount => F.Settings.PortalFrameSpawnExtraCount;
+
+    abstract protected Vector3 OffsetPosition { get; }
+    abstract public PortalFrame PortalFramePrefab { get; }
+
+    protected List<Vector3> EntranceBlocks { get;}
+    protected List<PortalFrame> Frames { get;}
+
+    public SessionEntity Session { get; }
+    public bool IsActivated { get; protected set; }
 
     Transform PortalParentCached;
-    Transform PortalParent {
+    protected Transform PortalParent {
         get {
             if (!PortalParentCached)
             {
@@ -46,25 +41,22 @@ public class PortalEntity
 
     public PortalEntity(SessionEntity session)
     {
+        Session = session;
+        Frames = new List<PortalFrame>(PortalFrameCount);
+        EntranceBlocks = new List<Vector3>(PortalEntranceCount);
+
         PortalParent.position = Vector3.down * 0.5f - Vector3.up * (session.LevelNumber * F.Settings.LevelDistance);
 
-        Session = session;
-        Frames = new List<PortalFrame>(F.Settings.PortalFrameCount);
-        EntranceBlocks = new List<Vector3>(F.Settings.PortalEntranceCount);
-
         var portalPosition = Utilities.GeneratePosition(Session.Player.BlockPosition, F.Settings.PortalSpawnRange);
-        Position = portalPosition + new Vector3(0.5f, 0f, 0.5f);
+        Position = portalPosition + OffsetPosition;
 
-        EntranceBlocks.Add(new Vector3(Position.x + 0.5f, 0f, Position.x + 0.5f));
-        EntranceBlocks.Add(new Vector3(Position.x + 0.5f, 0f, Position.x - 0.5f));
-        EntranceBlocks.Add(new Vector3(Position.x - 0.5f, 0f, Position.x + 0.5f));
-        EntranceBlocks.Add(new Vector3(Position.x - 0.5f, 0f, Position.x - 0.5f));
+        SetUpEntrance();
 
-        int frameStartCount = (int)UnityEngine.Random.Range(F.Settings.PortalFrameStartCount.x, F.Settings.PortalFrameStartCount.y);
+        int frameStartCount = (int)Random.Range(F.Settings.PortalFrameStartCount.x, F.Settings.PortalFrameStartCount.y);
         for (int i = 0; i < frameStartCount; i++)
         {
             var framePos = GenerateFramePosition(out var idx);
-            var frame = GameObject.Instantiate(F.Prefabs.PortalFrame, PortalParent);
+            var frame = GameObject.Instantiate(PortalFramePrefab, PortalParent);
             frame.Init(this, framePos, idx);
             Frames.Add(frame);
         }
@@ -84,6 +76,10 @@ public class PortalEntity
         EntranceBlocks.Clear();
     }
 
+
+    abstract protected void SetUpEntrance();
+    abstract protected void ActivatePortal();
+
     public bool IsPortalFramePosition(Vector3 posision)
     {
         var frame = Frames.Find(f => f.Position == posision);
@@ -98,14 +94,14 @@ public class PortalEntity
     public bool Build()
     {
         var frames = Session.Cube.PortalFrames;
-        for (int i = 0; i < F.Settings.PortalFrameCount; i++)
+        for (int i = 0; i < PortalFrameCount; i++)
         {
             if (Frames.Exists(f => f.Index == i)) { continue; }
 
             if (frames[0].View.TryGetComponent(out PortalFrame portalFrame))
             {
                 portalFrame.transform.parent = PortalParent;
-                frames[0].UpdatePosition(Position + FramePositions[i]);
+                frames[0].UpdatePosition(Position + FramePositions[i], F.Settings.CubeMovingSpeed);
                 portalFrame.SetIndex(i);
                 Frames.Add(portalFrame);
                 Session.Cube.RemoveFromList(frames[0]);
@@ -125,20 +121,12 @@ public class PortalEntity
         return false;
     }
 
-    void ActivatePortal()
-    {
-        IsActivated = true;
-        PortalVortex = PortalVortex.Create(Session, NormalizedPosition);
-        Debug.LogWarning("Portal activated");
-        //TODO 
-    }
-
     Vector3 GenerateFramePosition(out int id)
     {
         Vector3 result;
         do
         {
-            id = (int)UnityEngine.Random.Range(1f, F.Settings.PortalFrameCount);
+            id = (int)Random.Range(1f, PortalFrameCount);
             result = Position + FramePositions[id];
         } while (Frames.Exists(f => f.Position == result));
 

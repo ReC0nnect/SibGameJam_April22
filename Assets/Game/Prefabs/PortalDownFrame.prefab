@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: -6534565057186973096}
   - component: {fileID: 6147177626294564274}
   m_Layer: 0
-  m_Name: PortalFrame
+  m_Name: PortalDownFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

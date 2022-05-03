@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 7770221446612117866}
   - component: {fileID: 6527085396680174919}
   m_Layer: 0
-  m_Name: PortalVortex
+  m_Name: PortalDownVortex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

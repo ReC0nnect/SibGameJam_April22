@@ -21,7 +21,8 @@ MonoBehaviour:
   Follower: {fileID: 3705194871015703983, guid: 255694a2ac652ad4fbf0d467631419c2, type: 3}
   Cube: {fileID: -1163273833580696268, guid: f383e0c896643a64aae6fea3d7368732, type: 3}
   FreeCube: {fileID: -1163273833580696268, guid: 87fdd690ecc424e459a5116277732c74, type: 3}
-  PortalFrameCube: {fileID: 6147177626294564274, guid: 2372df3ee08b3c443969ae048ae00c6c, type: 3}
-  PortalFrame: {fileID: -6534565057186973096, guid: 2372df3ee08b3c443969ae048ae00c6c, type: 3}
-  PortalVortex: {fileID: 6527085396680174919, guid: 84de2f146d54b434ea72298f5b6bd766, type: 3}
+  PortalDownFrame: {fileID: -6534565057186973096, guid: 2372df3ee08b3c443969ae048ae00c6c, type: 3}
+  PortalUpFrame: {fileID: -6534565057186973096, guid: d42267bafacc931499ee4ae860b4147b, type: 3}
+  PortalDownVortex: {fileID: 6527085396680174919, guid: 7b6801089f1d8db46a97217d0bea5f50, type: 3}
+  PortalUpVortex: {fileID: 6527085396680174919, guid: 84de2f146d54b434ea72298f5b6bd766, type: 3}
   PortalTip: {fileID: 6982853552104954341, guid: d84f7c666a992634db0b98790e39fecf, type: 3}

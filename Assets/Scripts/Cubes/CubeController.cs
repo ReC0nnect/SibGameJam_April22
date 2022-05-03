@@ -213,7 +213,7 @@ public class CubeController
             } while (!IsEmptyPosition(position.Value));
         }
         var cube = new MysteryCubeEntity(Session);
-        cube.CreateView(CubesParent, F.Prefabs.PortalFrameCube, position.Value);
+        cube.CreateView(CubesParent, Session.Portal.PortalFrameCubePrefab, position.Value);
         FreeCubes.Add(cube);
     }
     #endregion
@@ -261,7 +261,7 @@ public class CubeController
 
         if ((playerNormalizedPosition - nearestSocketPos).sqrMagnitude < magnitude)
         {
-            Cubes[index].Cube.UpdatePosition(nearestSocketPos);
+            Cubes[index].Cube.UpdatePosition(nearestSocketPos, F.Settings.CubeMovingSpeed);
             Cubes[index].Position = nearestSocketPos;
 
             UpdateSockets();
@@ -271,7 +271,7 @@ public class CubeController
     public void StartFallCube(Vector3 fromPosition, Vector3 toPosition)
     {
         var cube = CreateCube(fromPosition);
-        cube.UpdatePosition(toPosition);
+        cube.UpdatePosition(toPosition, F.Settings.CubeFallingSpeed);
     }
 
     void Shoot()

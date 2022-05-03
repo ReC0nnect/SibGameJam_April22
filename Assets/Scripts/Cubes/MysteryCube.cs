@@ -26,17 +26,17 @@ public class MysteryCube : MonoBehaviour
         Entity = entity;
     }
 
-    public void SetPosition(Vector3 position)
+    public void SetPosition(Vector3 position, float speed)
     {
         if (MovingCoroutine != null)
         {
             StopCoroutine(MovingCoroutine);
         }
-        MovingCoroutine = StartCoroutine(BezierMoving(position));
+        MovingCoroutine = StartCoroutine(BezierMoving(position, speed));
     }
 
     Coroutine MovingCoroutine;
-    IEnumerator BezierMoving(Vector3 finishPosition)
+    IEnumerator BezierMoving(Vector3 finishPosition, float speed)
     {
         var startPosition = NormalizedPosition;
         var playerBottomPoint = Entity.Session.Player.NormalizedPosition + F.Settings.CubePlayerOffset;
@@ -54,9 +54,8 @@ public class MysteryCube : MonoBehaviour
             y = F.Settings.CubeAttackRotation,
             z = randValue % 3f == 0f ? F.Settings.CubeAttackRotation : 0f
         };
-
         Collider.isTrigger = true;
-        for (float t = 0f; t < 1; t += Time.deltaTime * F.Settings.CubeMovingSpeed)
+        for (float t = 0f; t < 1; t += Time.deltaTime * speed)
         {
             transform.localPosition = Utilities.GetCubicBezierPoint(startPosition, middle1Point, middle2Point, finishPosition, t);
             transform.rotation = Quaternion.Euler(rotationAngle * t);

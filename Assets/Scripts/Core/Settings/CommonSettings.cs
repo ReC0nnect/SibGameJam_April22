@@ -19,6 +19,7 @@ public class CommonSettings : ScriptableObject
     public float CubeMiddlePointRadius = 5f;
     public float CubeRadius = 5f;
     public float CubeMovingSpeed = 5f;
+    public float CubeFallingSpeed = 2f;
     public float CubeAttackTime = 5f;
 
     [Header("Free Cube")]
@@ -36,8 +37,15 @@ public class CommonSettings : ScriptableObject
     public Vector2 PortalFrameSpawnRange = new Vector2(24f, 48f);
     public Vector2 PortalFrameStartCount = new Vector2(3f, 8f);
     public float PortalFrameForbiddenDistanceToPortal = 8f;
+    public int PortalFrameSpawnExtraCount = 8;
+    
+    [Header("Portal Down")]
     public int PortalFrameCount = 12;
     public int PortalEntranceCount = 4;
+
+    [Header("Portal Up")]
+    public int PortalUpFrameCount = 12;
+    public int PortalUpEntranceCount = 4;
 
     [Header("Portal Vortex")]
     public float PortalVortexAttractRange = 3f;
@@ -45,5 +53,6 @@ public class CommonSettings : ScriptableObject
 
     [Header("Falling")]
     public float FallingTime = 7f;
+    public float FlightUpTime = 10f;
     public float LevelDistance = 100f;
 }

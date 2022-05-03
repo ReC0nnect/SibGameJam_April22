@@ -11,6 +11,19 @@ public class PortalController
 
     public Vector3 Position => Portal.Position;
     public bool IsActive => Portal.IsActivated;
+    public bool IsEndgamePortal => Portal is PortalUpEntity;
+
+
+    MysteryCube PortalFrameCubePrefabCached;
+    public MysteryCube PortalFrameCubePrefab {
+        get {
+            if (!PortalFrameCubePrefabCached)
+            {
+                PortalFrameCubePrefabCached = Portal.PortalFramePrefab.GetComponent<MysteryCube>();
+            }
+            return PortalFrameCubePrefabCached;
+        }
+    }
 
     public PortalController(SessionEntity session)
     {
@@ -21,9 +34,16 @@ public class PortalController
     {
         if (Portal == null)
         {
-            Portal = new PortalEntity(Session);
+            if (Session.Follower != null)
+            {
+                Portal = new PortalUpEntity(Session);
+            }
+            else
+            {
+                Portal = new PortalDownEntity(Session);
+            }
 
-            for (int i = 0; i < Portal.PortalFrameLeft * 2; i++)
+            for (int i = 0; i < Portal.PortalFrameSpawnCount + Portal.PortalFrameLeft; i++)
             {
                 Session.Cube.AddPortalFrame();
             }
@@ -49,6 +69,7 @@ public class PortalController
 
     public void Clear()
     {
+        PortalFrameCubePrefabCached = null;
         if (PortalTip)
         {
             GameObject.Destroy(PortalTip.gameObject);
