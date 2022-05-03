@@ -68,6 +68,7 @@ public class FollowAI : MonoBehaviour
                 || velocity.normalized.x > -0.5f && velocity.z > 0f
                 || velocity.x > 0f && velocity.normalized.z > -0.5f);
 
+                Unit.AnimScript.UpdateSpeed();
                 //Unit.AnimScript.SetHorizontalMovement(direction.x, direction.z);
             }
         }

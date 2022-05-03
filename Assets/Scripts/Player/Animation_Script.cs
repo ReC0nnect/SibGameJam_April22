@@ -32,6 +32,11 @@ public class Animation_Script : MonoBehaviour
         //anim.SetFloat("VerticalVelocity", yVel);
     }
 
+    public void UpdateSpeed()
+    {
+        anim.SetFloat("Speed", RB.velocity.sqrMagnitude);
+    }
+
     public void KillPlayer()
     {
         anim.SetBool("Dead", true);
