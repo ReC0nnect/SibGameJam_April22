@@ -25,7 +25,7 @@ public class EnemyController
     {
         if (SpawnTime < Time.timeSinceLevelLoad)
         {
-            SpawnTime = Time.timeSinceLevelLoad + F.Settings.EnemySpawnDelay;
+            SpawnTime = Time.timeSinceLevelLoad + F.Settings.EnemySpawnDelay - Session.LevelNumber;
             Spawn();
         }
     }

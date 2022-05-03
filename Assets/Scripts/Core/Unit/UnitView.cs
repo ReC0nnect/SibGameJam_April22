@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class UnitView : MonoBehaviour
 {
+    [SerializeField] UnitDescription UnitDescription;
     [SerializeField] Animation_Script Anim;
     [SerializeField] Player_Health Health;
     [SerializeField] SpriteRenderer View;
@@ -25,6 +26,7 @@ public class UnitView : MonoBehaviour
 
     public Animation_Script AnimScript => Anim;
     public Vector3 Position => transform.position;
+    public UnitDescription Description => UnitDescription;
 
     public void SetEntity(UnitEntity entity)
     {

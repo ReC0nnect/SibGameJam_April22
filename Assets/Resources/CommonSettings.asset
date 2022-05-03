@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd94ec3f92c05174ebd7866a0b609a60, type: 3}
   m_Name: CommonSettings
   m_EditorClassIdentifier: 
-  PlayerSpeed: 10
-  FollowMovingSpeed: 11
+  PlayerSpeed: 5
+  FollowMovingSpeed: 6
   FolowerSpawnRange: {x: 8, y: 14}
-  LevelWithFollower: 1
+  LevelWithFollower: 6
   CubePlayerOffset: {x: 0, y: -3, z: 0}
   CubePlayerAttackOffset: {x: 0, y: 5, z: 0}
   CubeAttackRotation: 360

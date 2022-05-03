@@ -28,6 +28,6 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        Unit.SetVelocity((Target.NormalizedPosition - Unit.Entity.NormalizedPosition).normalized * F.Settings.EnemyMovingSpeed);
+        Unit.SetVelocity((Target.NormalizedPosition - Unit.Entity.NormalizedPosition).normalized * Unit.Description.Speed);
     }
 }

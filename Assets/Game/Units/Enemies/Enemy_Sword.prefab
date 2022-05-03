@@ -64,6 +64,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17200184302dafd4285296e02bc08c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UnitDescription: {fileID: 11400000, guid: c05c4d3156b7e7e4f8f4dabcd6b6fea6, type: 2}
+  Anim: {fileID: 0}
+  Health: {fileID: 0}
   View: {fileID: 1493709034998040867}
   ControlFlip: 1
 --- !u!1 &4448133240614358973
