@@ -193,6 +193,10 @@ MonoBehaviour:
   FreeMaterial: {fileID: 0}
   Mesh: {fileID: 876105483249436422}
   IsPortalFrame: 1
+  OuterCube: {fileID: 0}
+  InnerCubes: {fileID: 0}
+  HitSound: Hit_Sound
+  CubeFlySound: Cube_Fly
 --- !u!1001 &2011166102980680578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -259,7 +263,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 51fa7c6e661a779429282df231a11747, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e9a849581e128eb42bbe96dadb0404ff, type: 2}
+      objectReference: {fileID: 2100000, guid: 2d2e44c80d6ec6044b1570294e6ec012, type: 2}
     - target: {fileID: 919132149155446097, guid: 51fa7c6e661a779429282df231a11747, type: 3}
       propertyPath: m_Name
       value: Cube_Model

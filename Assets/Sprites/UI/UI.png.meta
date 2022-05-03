@@ -241,7 +241,7 @@ TextureImporter:
         width: 188
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -249,6 +249,27 @@ TextureImporter:
       bones: []
       spriteID: 68b6a70751df06544aed12b774bf3a46
       internalID: 1180832824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_Start
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 394
+        width: 104
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f13c9412b770d469e57a53d4452448
+      internalID: -745142104
       vertices: []
       indices: 
       edges: []
@@ -268,6 +289,7 @@ TextureImporter:
       Button_1: 955870581
       UI_1: 2044363090
       Health_Bar: 1056717692
+      Button_Start: -745142104
       Health_On: -565595129
       Health_Off: 522386293
   spritePackingTag: 
