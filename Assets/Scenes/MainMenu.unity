@@ -1046,7 +1046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayButton: {fileID: 1423512083}
   ExitButton: {fileID: 1854952451}
-  WebplayerQuitURL: http://google.com
+  WebplayerQuitURL: https://rec0nnect.itch.io/alleyofvoid
 --- !u!1 &1742973235
 GameObject:
   m_ObjectHideFlags: 0

@@ -64,7 +64,7 @@ public class UnitInput : MonoBehaviour
             direction.z += -1f;
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && UnitView.Entity.Session.Enemy.HasEnemy)
         {
             Anim.AttackAnim();
         }
