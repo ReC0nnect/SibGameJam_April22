@@ -11,7 +11,7 @@ public class CommonSettings : ScriptableObject
     public float FollowMovingSpeed = 10f;
     public Vector2 FolowerSpawnRange = new Vector2(8f, 14f);
     public int LevelWithFollower = 1;
-    
+
     [Header("Cube")]
     public Vector3 CubePlayerOffset = new Vector3(0f, -5f, 0f);
     public Vector3 CubePlayerAttackOffset = new Vector3(0f, 5f, 0f);
@@ -21,6 +21,13 @@ public class CommonSettings : ScriptableObject
     public float CubeMovingSpeed = 5f;
     public float CubeFallingSpeed = 2f;
     public float CubeAttackTime = 5f;
+
+    [Header("Background Cube")]
+    public Vector2 BackgroundCubeDepth = new Vector2(5f, 16f);
+    public Vector2 BackgroundCubeDistance = new Vector2(32f, 64f);
+    public Vector2 BackgroundCubeSize = new Vector2(1.5f, 5f);
+    [Range(0f, 1f)] public float BackgroundCubeScaleChance = 0.7f;
+    public int BackgroundCubeCount = 32;
 
     [Header("Free Cube")]
     public Vector2 FreeCubeRange = new Vector2();

@@ -24,6 +24,11 @@ MonoBehaviour:
   CubeMovingSpeed: 4
   CubeFallingSpeed: 0.7
   CubeAttackTime: 1
+  BackgroundCubeDepth: {x: 4, y: 12}
+  BackgroundCubeDistance: {x: 32, y: 52}
+  BackgroundCubeSize: {x: 1.5, y: 5}
+  BackgroundCubeScaleChance: 0.7
+  BackgroundCubeCount: 64
   FreeCubeRange: {x: 32, y: 48}
   FreeCubeCount: 16
   FreeCubeMaxDistance: 48
@@ -34,6 +39,7 @@ MonoBehaviour:
   PortalFrameSpawnRange: {x: 24, y: 48}
   PortalFrameStartCount: {x: 3, y: 6}
   PortalFrameForbiddenDistanceToPortal: 8
+  PortalTipDelay: 30
   PortalFrameSpawnExtraCount: 8
   PortalFrameCount: 12
   PortalEntranceCount: 4

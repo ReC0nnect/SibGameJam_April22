@@ -55,6 +55,7 @@ public class PlayerEntity : UnitEntity
             {
                 blockStartFalling = true;
                 Session.Clear();
+                Session.BackgroundCubes.Respawn(finishPos);
                 Session.Cube.StartFallCube(startPos + (finishPos - startPos) / 3f, finishPos);
             }
             yield return null;

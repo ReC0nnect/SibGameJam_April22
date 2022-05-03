@@ -14,6 +14,7 @@ public class SessionEntity
     public EnemyController Enemy { get; private set; }
     public CubeController Cube { get; private set; }
     public PortalController Portal { get; private set; }
+    public BackgroundCubes BackgroundCubes { get; private set; }
 
     public Audio_Manager SFX { get; private set; }
 
@@ -40,6 +41,8 @@ public class SessionEntity
         Cube = new CubeController(this);
         Portal = new PortalController(this);
         SFX = GameObject.FindObjectOfType<Audio_Manager>();
+        BackgroundCubes = GameObject.FindObjectOfType<BackgroundCubes>();
+        BackgroundCubes.Init(this);
         Portal.CreatePortal();
 
         Player.OnFallingFinished += LoadNextLevel;
