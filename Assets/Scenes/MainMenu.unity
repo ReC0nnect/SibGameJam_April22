@@ -318,7 +318,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: EXIT
+  m_text: "\u0412\u044B\u0445\u043E\u0434"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73c90786529805641a6a093e0cf39403, type: 2}
   m_sharedMaterial: {fileID: 2059481606172649385, guid: 73c90786529805641a6a093e0cf39403, type: 2}
