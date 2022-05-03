@@ -2087,6 +2087,7 @@ MonoBehaviour:
   WinPanel: {fileID: 597020318}
   WinButton: {fileID: 465385232}
   WinTime: {fileID: 839511386}
+  Time: {fileID: 1106279696}
 --- !u!1 &1120125035
 GameObject:
   m_ObjectHideFlags: 0

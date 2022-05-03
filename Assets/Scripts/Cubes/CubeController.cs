@@ -249,7 +249,6 @@ public class CubeController
             if (Input.GetKeyDown(KeyCode.Space) && Session.Enemy.HasEnemy)
             {
                 Shoot();
-
             }
         }
     }
@@ -291,11 +290,14 @@ public class CubeController
 
     void Shoot()
     {
-        var farrestCube = Cubes.Where(c => !c.Cube.IsPortalFrame)
+        if (Cubes.Count > 0)
+        {
+            var farrestCube = Cubes.Where(c => !c.Cube.IsPortalFrame)
                                .OrderByDescending(c => (Session.Player.NormalizedPosition - c.Position).sqrMagnitude)
                                .First();
-        RemoveFromList(farrestCube);
-        farrestCube.Cube.Shoot(Session.Enemy.GetNearestOfPlayer());
+            RemoveFromList(farrestCube);
+            farrestCube.Cube.Shoot(Session.Enemy.GetNearestOfPlayer());
+        }
     }
 
     public void RemoveFromList(MysteryCubeEntity cube)

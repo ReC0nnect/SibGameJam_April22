@@ -10,6 +10,7 @@ public class UI_Controller : MonoBehaviour
     [SerializeField] GameObject WinPanel;
     [SerializeField] Button WinButton;
     [SerializeField] TextMeshProUGUI WinTime;
+    [SerializeField] public Time_Controller Time;
 
     public static UI_Controller Instance;
 

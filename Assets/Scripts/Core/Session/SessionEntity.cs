@@ -32,6 +32,18 @@ public class SessionEntity
         Cube.Update();
         Enemy.Update();
         PlayTime += Time.deltaTime;
+
+        CheckPlayerDeath();
+    }
+
+    void CheckPlayerDeath()
+    {
+        var deathLevel = -LevelNumber * F.Settings.LevelDistance;
+        if (!Player.IsFalling && Player.IsAlive && Player.Position.y < deathLevel)
+        {
+            Player.IsAlive = false;
+            UI_Controller.Instance.Time.ShowDeadMenu();
+        }
     }
 
     void Init()
