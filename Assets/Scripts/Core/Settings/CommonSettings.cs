@@ -37,6 +37,7 @@ public class CommonSettings : ScriptableObject
     public Vector2 PortalFrameSpawnRange = new Vector2(24f, 48f);
     public Vector2 PortalFrameStartCount = new Vector2(3f, 8f);
     public float PortalFrameForbiddenDistanceToPortal = 8f;
+    public float PortalTipDelay = 30f;
     public int PortalFrameSpawnExtraCount = 8;
     
     [Header("Portal Down")]

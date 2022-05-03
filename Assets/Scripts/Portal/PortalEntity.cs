@@ -123,13 +123,15 @@ public abstract class PortalEntity
 
     Vector3 GenerateFramePosition(out int id)
     {
-        Vector3 result;
-        do
+        var result = Position + FramePositions[id = 0];
+        if (Frames.Exists(f => f.Index == 0))
         {
-            id = (int)Random.Range(1f, PortalFrameCount);
-            result = Position + FramePositions[id];
-        } while (Frames.Exists(f => f.Position == result));
-
+            do
+            {
+                id = (int)Random.Range(1f, PortalFrameCount);
+                result = Position + FramePositions[id];
+            } while (Frames.Exists(f => f.Position == result));
+        }
         return result;
     }
 }
