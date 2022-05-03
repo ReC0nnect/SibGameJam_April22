@@ -15,9 +15,6 @@ public class PrefabSettings : ScriptableObject
     public UnitView Enemy_7;
     public UnitView Enemy_8;
 
-    public GameObject Fireball;
-
-
     public UnitView Follower;
     public MysteryCube Cube;
     public MysteryCube FreeCube;

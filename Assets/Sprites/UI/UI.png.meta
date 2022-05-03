@@ -262,7 +262,7 @@ TextureImporter:
         width: 104
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -270,6 +270,48 @@ TextureImporter:
       bones: []
       spriteID: 23f13c9412b770d469e57a53d4452448
       internalID: -745142104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sound_Sprite
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 482
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38eced45b14b296499f96c73187ad46e
+      internalID: -1281449072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Music_Sprite
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 482
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 015eb9a5a943def4baa5836954fe87a6
+      internalID: -1504313200
       vertices: []
       indices: 
       edges: []
@@ -288,8 +330,10 @@ TextureImporter:
       Game_Over_Logo: 1180832824
       Button_1: 955870581
       UI_1: 2044363090
+      Sound_Sprite: -1281449072
       Health_Bar: 1056717692
       Button_Start: -745142104
+      Music_Sprite: -1504313200
       Health_On: -565595129
       Health_Off: 522386293
   spritePackingTag: 
