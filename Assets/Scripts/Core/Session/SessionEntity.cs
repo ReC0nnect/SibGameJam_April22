@@ -71,4 +71,9 @@ public class SessionEntity
         Cube.Clear();
         Portal.Clear();
     }
+
+    public void Win()
+    {
+        
+    }
 }

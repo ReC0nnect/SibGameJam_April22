@@ -65,14 +65,22 @@ public class PlayerEntity : UnitEntity
         var finishPos = Position;
         finishPos.y = F.Settings.LevelDistance * Session.LevelNumber;
         var blockStartFalling = false;
+        var gameFinished = false;
         IsFalling = true;
         Session.Follower.SetPosition(Position);
         var offset = Vector3.zero;
+        var time = 0f;
         for (float t = 0f; t < 1f; t += Time.deltaTime / F.Settings.FlightUpTime)
         {
+            time += Time.deltaTime;
             if (t < 0.1f)
             {
                 offset.x -= 3f * t;
+            }
+            if (time > 1f && !gameFinished)
+            {
+                gameFinished = true;
+                Session.Win();
             }
             var pos = Vector3.Lerp(startPos + offset, finishPos, t);
             View.SetPosition(pos);
